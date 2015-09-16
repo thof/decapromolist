@@ -63,38 +63,5 @@
             "37", 
             "40"
         ]
-    }, 
-    {
-        "dc": 40, 
-        "nm": "Buty GEL KAYANO 21", 
-        "op": 499.99, 
-        "or": "Ni\u017csza cena z 379.99", 
-        "pp": "379.99", 
-        "pr": 299.99, 
-        "rl": "http://www.decathlon.pl/buty-gel-kayano-21-id_8324657.html", 
-        "sz": [
-            "43,5", 
-            "44"
-        ]
-    }, 
-    {
-        "dc": 50, 
-        "nm": "Sleepin'BedCover Camping 20\u00b01M", 
-        "op": 99.99, 
-        "or": "Powr\u00f3t", 
-        "pp": "49.99", 
-        "pr": 49.99, 
-        "rl": "http://www.decathlon.pl/sleepinbedcover-camping-201m-id_8328584.html", 
-        "sz": []
-    }, 
-    {
-        "dc": 75, 
-        "nm": "Buty Frost granatowe", 
-        "op": 119.99, 
-        "or": "Nowa", 
-        "pp": "0.0", 
-        "pr": 29.99, 
-        "rl": "http://www.decathlon.pl/buty-frost-granatowe-id_8311967.html", 
-        "sz": []
     }
 ]
