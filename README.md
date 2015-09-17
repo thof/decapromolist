@@ -22,16 +22,16 @@ Każdy rekord w pliku może zawierać następujące klucze (string):
 **Przykład wydruku:**
 Kategoria: Jeździectwo->Wyposażenie jeźdźca
 
-Oficerki skórzane Victory S 649.99->259.99 (60%) [Powrót] [Rozmiary: 37, 38, 40, 41]
+[Oficerki skórzane Victory S](http://www.decathlon.pl/oficerki-skorzane-victory-s-id_8206442.html) 649.99->259.99 (60%) [Powrót] [Rozmiary: 37, 38, 40, 41]
 
 **Co odpowiada:** 
-Kategoria: *cat['name']*->*prod['sc']*
+Kategoria: *cat['name']*->*cat['subName']*
 
-{*prod['nm'] prod['rl']*} *prod['op']*->*prod['pr']* \(*prod['dc']*) [*prod['or']*] [Rozmiary: *prod['sz']*]
+*\[prod['nm']\]\(prod['rl']\)* *prod['op']*->*prod['pr']* \(*prod['dc']*) [*prod['or']*] [Rozmiary: *prod['sz']*]
 
 ### subcat.json
 
-W podkatalogu *category* znajdują się listy kategorii wraz z podkategoriami. Najnowsza lista znajduje się w pliku [subcat.json](https://raw.githubusercontent.com/thof/decapromolist/master/category/subcat.json). Plik jest pomocy przy rozkodowywaniu podkategorii produktów.
+W podkatalogu *category* znajdują się listy kategorii wraz z podkategoriami. Plik [subcat.json](https://raw.githubusercontent.com/thof/decapromolist/master/category/subcat.json) zawiera najnowszą dostępną listę. Plik jest pomocny przy rozkodowywaniu podkategorii produktów.
 
 Każdy rekord w pliku może zawierać następujące klucze (string):
 * subId - ID podkategorii
