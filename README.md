@@ -8,10 +8,16 @@ Decapromolist to prosty projekt, który stara się wyszukiwać atrakcyjnych okaz
 * mysql-python
 
 ### Instalacja/uruchomienie
-python2 run.py
+`python2 run.py`
 
 ### Konfiguracja
 W katalogu *config* znajduje się przykładowy plik konfiguracyjny. Należy go poprawić, a potem zmienić nazwę na *config.json*.
+Klucze, które mogą być niejasne:
+* decapromolistDir - ścieżka do katalogu, w którym znajduje się projekt. Poprawna wartość jest wymagana tylko w przypadku automatycznego dodawania zmian do githuba. W przeciwnym wypadku pole jest opcjonalne,
+* host - gdzie znajduje się baza danych MySQL,
+* user - użytkownik bazodanowy,
+* passwd - hasło,
+* dbname - nazwa bazy MySQL.
 
 ### Baza danych
 Struktura tabel bazy danych znajduje się w katalogu *dbschema*.
