@@ -54,8 +54,8 @@ class PrepareResults:
             con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
                               Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT last_date FROM product_promo WHERE last_date < \"{}\" ORDER BY last_date DESC LIMIT 1")\
-                .format(self.dateTime)
+            cur.execute("SELECT last_date FROM product_promo WHERE last_date < \"{}\" ORDER BY last_date DESC LIMIT 1"
+                        .format(self.dateTime))
             row = cur.fetchone()
             self.datePrevProcFormatted = row['last_date'].strftime('%d.%m.%Y')
         except mdb.Error, e:
