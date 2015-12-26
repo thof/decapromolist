@@ -1,0 +1,3 @@
+# Product directory
+
+Empty directory.
