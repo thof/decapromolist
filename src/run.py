@@ -33,7 +33,7 @@ class Run:
     subcat.getSubcategories()
     print "Done"
 
-    print "Preparing product list..."
+    print "Preparing products list..."
     parser = DecaParser()
     parser.getProducts()
     print "Done"
