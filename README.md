@@ -2,6 +2,26 @@
 
 Decapromolist to prosty projekt, który stara się wyszukiwać atrakcyjnych okazji cenowych w sklepie internetowym www.decathlon.pl.
 
+### Zależności
+* python2
+* python2-lxml
+* mysql-python
+
+### Instalacja/uruchomienie
+`python2 run.py`
+
+### Konfiguracja
+W katalogu *config* znajduje się przykładowy plik konfiguracyjny. Należy go poprawić, a potem zmienić nazwę na *config.json*.
+Klucze, które mogą być niejasne:
+* decapromolistDir - ścieżka do katalogu, w którym znajduje się projekt. Poprawna wartość jest wymagana tylko w przypadku automatycznego dodawania zmian do githuba. W przeciwnym wypadku pole jest opcjonalne,
+* host - gdzie znajduje się baza danych MySQL,
+* user - użytkownik bazodanowy,
+* passwd - hasło,
+* dbname - nazwa bazy MySQL.
+
+### Baza danych
+Struktura tabel bazy danych znajduje się w katalogu *dbschema*.
+
 ### decapromolist.json
 
 W podkatalogu *decapromolist* znajdują się listy promowanych/przecenionych produktów. Aktualna lista znajduje się zawsze w pliku [decapromolist.json](https://raw.githubusercontent.com/thof/decapromolist/master/decapromolist/decapromolist.json). Kiedy zostaje on zastąpiony nowszym, jego nazwa zmienia się na *decapromolist_\<data\>.json*, gdzie *\<data\>* to dzień, w którym plik przestaje być aktualny. Listy mogą posłużyć jako źródła danych dla wygodnego front-endu.
