@@ -50,7 +50,7 @@ class Run:
     res.prepareRegularList()
     print "Więcej informacji: https://github.com/thof/decapromolist#decapromolist"
     print "PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)"
-    res.finish()()
+    res.finish()
 
     print "Commiting changes..."
     comm = GithubComm()
