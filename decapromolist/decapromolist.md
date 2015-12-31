@@ -1,6 +1,6 @@
 #decapromolist lista promowanych produktów (delta 28.12.2015-31.12.2015):
 
-Kategoria: Turystyka, Wspinaczka->Odzież
+Kategoria: Turystyka, Wspinaczka->Odzież  
 F [Kurtka turystyczna Forclaz 200 3 w 1 Rain damska QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-forclaz-200-3w1-damska-id_8343826.html) 399.99->229.99 (43%) [Wyższa cena z 180.0] [Rozmiary: XS, M, L, XL]
 **M** [Spodnie turystyczne Arpenaz 50 męskie QUECHUA](http://www.decathlon.pl/spodnie-arpenaz-50-karmelowe-id_8329530.html) **49.99->19.99 (60%) [Powrót]** [Rozmiary: 38, 40, 42, 48]
 
