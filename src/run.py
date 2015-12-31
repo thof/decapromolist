@@ -48,8 +48,6 @@ class Run:
     res.getPrevProcDate()
     res.preparePromoList()
     res.prepareRegularList()
-    print "Więcej informacji: https://github.com/thof/decapromolist#decapromolist"
-    print "PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)"
     res.finish()
 
     print "Commiting changes..."

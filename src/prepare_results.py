@@ -16,6 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import print_function
 import json
 import MySQLdb as mdb
 import sys
@@ -34,6 +35,8 @@ class PrepareResults:
 
     def __init__(self):
         self.products = []
+        Utils.renameFile(Utils.getConfig()['decapromolistMDFile'])
+        self.mdFile = open(Utils.getConfig()['decapromolistMDFile'],'w')
 
     @staticmethod
     def operationToDescr(argument, prevPrice):
@@ -59,7 +62,7 @@ class PrepareResults:
             row = cur.fetchone()
             self.datePrevProcFormatted = row['last_date'].strftime('%d.%m.%Y')
         except mdb.Error, e:
-            print "Error %d: %s" % (e.args[0], e.args[1])
+            print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
             if con:
@@ -91,8 +94,8 @@ class PrepareResults:
                             ProcessData.PROD_WITHDRAW, self.dateTime))
             productPromoDB = cur.fetchall()
 
-            print "#decapromolist lista promowanych produktów (delta {}-{}):".format(self.datePrevProcFormatted,
-                                                                                     self.dateFormatted)
+            print("#decapromolist lista promowanych produktów (delta {}-{}):".format(self.datePrevProcFormatted,
+                                                                             self.dateFormatted), file=self.mdFile)
 
             for cat in subcatData:
                 # checked whether the list contains at least one product belonging to processed subcategory
@@ -100,7 +103,7 @@ class PrepareResults:
                 if rowCat is None:
                     continue
                 else:
-                    catStr = "\nKategoria: " + cat['name'] + "->" + cat['subName']
+                    catStr = "\nKategoria: " + cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
                 # process promoted items
                 for row in productPromoDB:
                     product = {}
@@ -134,6 +137,7 @@ class PrepareResults:
                         name = name.title().encode('utf-8')
                     else:
                         name = name.encode('utf-8')
+                    print(name+" "+url)
 
                     # get an image
                     imgPosStart = content.find('tc_vars["product_url_picture"]')
@@ -208,12 +212,12 @@ class PrepareResults:
                         product['rd'] = prodLowestPrice['date']
 
                     if catStr != '':
-                        print catStr
+                        print(catStr, file=self.mdFile)
                         catStr = ''
-                    print text
+                    print(text, file=self.mdFile)
                     self.products.append(product)
         except mdb.Error, e:
-            print "Error %d: %s" % (e.args[0], e.args[1])
+            print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
             if con:
@@ -239,8 +243,8 @@ class PrepareResults:
             cur.execute("SELECT * FROM product_price WHERE date != \"{}\" AND id IN ({})".format(self.dateTime[:10], ids))
             productPrevPrice = cur.fetchall()
 
-            print "\nLista przecenionych produktów (delta {}-{}):\n".format(self.datePrevProcFormatted,
-                                                                            self.dateFormatted)
+            print("\nLista przecenionych produktów (delta {}-{}):\n".format(self.datePrevProcFormatted,
+                                                                            self.dateFormatted), file=self.mdFile)
 
             productFinal = []
             # looking for products for which current price is lower than the last one
@@ -286,17 +290,20 @@ class PrepareResults:
                                                                                      prodLowestPrice['date'])
                     product['rp'] = prodLowestPrice['price']
                     product['rd'] = prodLowestPrice['date']
-                print text
+                print(text, file=self.mdFile)
                 self.products.append(product)
-            print ""
+            print("", file=self.mdFile)
         except mdb.Error, e:
-            print "Error %d: %s" % (e.args[0], e.args[1])
+            print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
             if con:
                 con.close()
 
     def finish(self):
+        print("Więcej informacji: https://github.com/thof/decapromolist#decapromolist", file=self.mdFile)
+        print("PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)", file=self.mdFile)
+        self.mdFile.close()
         Utils.renameFile(Utils.getConfig()['decapromolistFile'])
         Utils.saveJsonFile(Utils.getConfig()['decapromolistFile'], self.products)
 
@@ -306,6 +313,4 @@ if __name__ == "__main__":
     res.getPrevProcDate()
     res.preparePromoList()
     res.prepareRegularList()
-    print "Więcej informacji: https://github.com/thof/decapromolist#decapromolist"
-    print "PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)"
     res.finish()

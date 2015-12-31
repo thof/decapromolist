@@ -44,7 +44,6 @@ class Utils:
     def renameFile(filename):
         dotPos = filename.rfind('.')
         newFilename = filename[:dotPos] + "_" + Utils.dateTime + "." + filename[dotPos+1:]
-        # newFilename = filename.split('.')[0] + "_" + Utils.dateTime + "." + filename.split('.')[1]
         try:
             os.rename(filename, newFilename)
         except OSError as oe:

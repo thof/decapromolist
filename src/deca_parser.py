@@ -17,6 +17,7 @@
 
 import json
 import urllib2
+import re
 from lxml import html
 from utils import Utils
 
@@ -46,14 +47,18 @@ class DecaParser:
         response = html.fromstring(content)
         for sel in response.xpath('//li[@class="product product_normal"]'):
             try:
-                item = {'id': sel.xpath('@data-product-id')[0], 'price': sel.xpath('@data-product-price')[0],
-                        'url': sel.xpath('div//a[@class="product_name"]/@href')[0],
-                        'avail': sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0], 'cat': subId}
+                item = {}
+                item['id'] = sel.xpath('@data-product-id')[0]
+                item['price'] = sel.xpath('@data-product-price')[0]
+                item['url'] = sel.xpath('div//a[@class="product_name"]/@href')[0]
+                item['avail'] = sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0],
+                item['cat'] = subId
                 # item['name'] = sel.xpath('@data-product-name')[0]
                 # item['descr'] = sel.xpath('div//img/@alt').extract()[0]
                 try:
-                    item['oldPr'] = sel.xpath('div//span[@class="old_price left "]/text()')[0]
-                    item['disc'] = sel.xpath('div//span[@class="oldPrice-percentage"]/text()')[0]
+                    item['oldPr'] = sel.xpath('div//span[@class="old_price"]/text()')[0][:-6]
+                    item['oldPr'] = float(''.join(item['oldPr'].split()).replace(",", "."))
+                    item['disc'] = int(re.findall(r'\d+', sel.xpath('div//span[@class="oldPrice-percentage"]/text()')[0])[0])
                 except IndexError:
                     # print "Item without discount: "+item['id']+" "+item['name']
                     pass

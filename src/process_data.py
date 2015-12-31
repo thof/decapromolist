@@ -46,26 +46,25 @@ class ProcessData:
         # open products file and process items
         with open(Utils.getConfig()['productFile']) as json_file:
             json_data = json.load(json_file)
-        for data in json_data:
+        for item in json_data:
             product = {}
             # not available products are omitted
-            if data['avail'] == self.PROD_NOT_AVAIL:
+            if item['avail'] == self.PROD_NOT_AVAIL:
                 continue
-            product['id'] = long(data['id'])
-            product['price'] = float(data['price'])
-            product['category'] = data['cat']
+            product['id'] = long(item['id'])
+            product['price'] = float(item['price'])
+            product['category'] = item['cat']
             # product['name'] = data['name'].encode('utf-8')
-            product['url'] = data['url'].encode('utf-8')
+            product['url'] = item['url'].encode('utf-8')
             # in case of regular product add it to separate table
-            if data.get('oldPr', None) is None:
+            if item.get('oldPr', None) is None:
                 product['date'] = self.dateTime[:10]
                 productsRegular.append(product)
             else:
-                oldPrice = data['oldPr'][:-6]
-                product['old_price'] = float(''.join(oldPrice.split()).replace(",", "."))
-                product['discount'] = int(re.findall(r'\d+', data['disc'])[0])
+                product['old_price'] = item['oldPr']
+                product['discount'] = item['disc']
                 # product['description'] = data['descr'].encode('utf-8')
-                product['url'] = data['url'].encode('utf-8')
+                product['url'] = item['url'].encode('utf-8')
                 productsPromo.append(product)
         self.updateRegularProducts(productsRegular)
         self.updatePromoProducts(productsPromo)

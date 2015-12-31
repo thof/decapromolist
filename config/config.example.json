@@ -4,6 +4,7 @@
     "subcatFile" : "../category/subcat.json",
     "productFile" : "../product/product.json",
     "decapromolistFile" : "../decapromolist/decapromolist.json",
+    "decapromolistMDFile" : "../decapromolist/decapromolist.md",
     "host" : "localhost",
     "user" : "username",
     "passwd" : "password",
