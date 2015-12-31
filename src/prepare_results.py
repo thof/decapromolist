@@ -32,6 +32,7 @@ class PrepareResults:
     datePrevProcFormatted = datetime.date.fromordinal(datetime.date.today().toordinal() - 1).strftime("%d.%m.%Y")
     dateTime = datetime.datetime.now().strftime("%Y-%m-%d 00:00:01")
     # dateTime = "2015-10-04 00:00:01"
+    SPACES = "  "
 
     def __init__(self):
         self.products = []
@@ -137,7 +138,7 @@ class PrepareResults:
                         name = name.title().encode('utf-8')
                     else:
                         name = name.encode('utf-8')
-                    print(name+" "+url)
+                    print(name+" "+url.encode('utf-8'))
 
                     # get an image
                     imgPosStart = content.find('tc_vars["product_url_picture"]')
@@ -212,9 +213,9 @@ class PrepareResults:
                         product['rd'] = prodLowestPrice['date']
 
                     if catStr != '':
-                        print(catStr, file=self.mdFile)
+                        print(catStr+self.SPACES, file=self.mdFile)
                         catStr = ''
-                    print(text, file=self.mdFile)
+                    print(text+self.SPACES, file=self.mdFile)
                     self.products.append(product)
         except mdb.Error, e:
             print("Error %d: %s" % (e.args[0], e.args[1]))
@@ -243,7 +244,7 @@ class PrepareResults:
             cur.execute("SELECT * FROM product_price WHERE date != \"{}\" AND id IN ({})".format(self.dateTime[:10], ids))
             productPrevPrice = cur.fetchall()
 
-            print("\nLista przecenionych produktów (delta {}-{}):\n".format(self.datePrevProcFormatted,
+            print("\n\nLista przecenionych produktów (delta {}-{}):\n".format(self.datePrevProcFormatted,
                                                                             self.dateFormatted), file=self.mdFile)
 
             productFinal = []
@@ -290,7 +291,7 @@ class PrepareResults:
                                                                                      prodLowestPrice['date'])
                     product['rp'] = prodLowestPrice['price']
                     product['rd'] = prodLowestPrice['date']
-                print(text, file=self.mdFile)
+                print(text+self.SPACES, file=self.mdFile)
                 self.products.append(product)
             print("", file=self.mdFile)
         except mdb.Error, e:
