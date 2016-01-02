@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Decapromolist</title>
+    <link rel="stylesheet" type="text/css" href="pub/style.css" />
+    
+    <link href="http://js-grid.com/css/jsgrid.min.css" rel="stylesheet" />
+    <link href="http://js-grid.com/css/jsgrid-theme.min.css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="pub/db.js"></script>
+    
+    <script src="http://js-grid.com/js/jsgrid.min.js"></script>
+</head>
+<body>
+    <h1><a href="https://github.com/thof/decapromolist">decapromolist</a></h1>
+    <div id="jsGrid"></div>
+
+    <script>
+        $(function() {
+
+            $("#jsGrid").jsGrid({
+                height: "95%",
+                width: "100%",
+                filtering: true,
+                editing: false,
+                inserting: false,
+                sorting: true,
+                paging: false,
+                autoload: true,
+                pageSize: 15,
+                pageButtonCount: 5,
+                deleteConfirm: "Do you really want to delete the client?",
+                controller: db,
+                fields: [
+                    { name: "sx", title: "Płeć", type: "text" , width: 10},
+                    { name: "sc", title: "Kategoria", type: "text" , width: 80},
+                    { name: "nm", title: "Nazwa", type: "text", width: 150 },
+                    { name: "sz", title: "Rozmiary", type: "text", width: 100 },
+                    { name: "pr", title: "Cena", type: "text", sorter: "number", width: 20 },
+                    { name: "pp", title: "Poprzed. cena", type: "text", sorter: "number", width: 20 },
+                    { name: "dc", title: "Zniżka (%)", type: "text", sorter: "number", width: 10 },
+                    { name: "or", title: "Operacja", type: "text", width: 70 }
+                ]
+            });
+
+        });
+    </script>
+</body>
+</html>
