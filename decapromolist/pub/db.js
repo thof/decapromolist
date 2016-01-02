@@ -19,7 +19,7 @@
                         && (!filter.sz || checkString(product.sz, filter.sz))
                         && (!filter.or || checkString(product.or, filter.or))
                         && (!filter.pr || checkNumber(product.pr, filter.pr))
-                        && (!filter.pp || checkNumber(product.pp, filter.pp))
+                        && (!filter.op || checkNumber(product.pp, filter.op))
                         && (!filter.dc || checkNumber(product.dc, filter.dc));
                 } catch(err) {
                     console.log(err.message);
