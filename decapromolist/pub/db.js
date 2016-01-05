@@ -68,3 +68,4 @@ function checkNumber(number, cmpNumber){
         return num == cmpNum; 
     }
 }
+
