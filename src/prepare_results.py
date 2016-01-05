@@ -31,13 +31,15 @@ class PrepareResults:
     dateFormatted = datetime.datetime.now().strftime("%d.%m.%Y")
     datePrevProcFormatted = datetime.date.fromordinal(datetime.date.today().toordinal() - 1).strftime("%d.%m.%Y")
     dateTime = datetime.datetime.now().strftime("%Y-%m-%d 00:00:01")
-    # dateTime = "2015-10-04 00:00:01"
+    #dateTime = "2016-01-02 00:00:01"
     SPACES = "  "
 
     def __init__(self):
         self.products = []
         Utils.renameFile(Utils.getConfig()['decapromolistMDFile'])
         self.mdFile = open(Utils.getConfig()['decapromolistMDFile'],'w')
+        with open(Utils.getConfig()['subcatFile']) as jsonFile:
+            self.subcatData = json.load(jsonFile)
 
     @staticmethod
     def operationToDescr(argument, prevPrice):
@@ -75,8 +77,6 @@ class PrepareResults:
         junior = ["junior", "dziec"]
         juniorYear = ["lat", "ans"]
 
-        with open(Utils.getConfig()['subcatFile']) as jsonFile:
-            subcatData = json.load(jsonFile)
         try:
             con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
                               Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
@@ -98,7 +98,7 @@ class PrepareResults:
             print("#decapromolist lista promowanych produktów (delta {}-{}):".format(self.datePrevProcFormatted,
                                                                              self.dateFormatted), file=self.mdFile)
 
-            for cat in subcatData:
+            for cat in self.subcatData:
                 # checked whether the list contains at least one product belonging to processed subcategory
                 rowCat = next((row for row in productPromoDB if row['category'] == cat['subId']), None)
                 if rowCat is None:
@@ -157,7 +157,7 @@ class PrepareResults:
                     if any(substring in label for substring in male) == True or \
                                     any(substring in nameLower for substring in male) == True or \
                                     any(substring in nameCheck for substring in male) == True:
-                        sex = "**M**"
+                        sex = "M"
                     elif any(substring in label for substring in female) == True or \
                                     any(substring in nameLower for substring in female) == True or \
                                     any(substring in nameCheck for substring in female) == True:
@@ -167,23 +167,26 @@ class PrepareResults:
                                     any(substring in nameCheck for substring in junior) == True:
                         sex = "J"
                     else:
-                        sex = "**U**"
+                        sex = "U"
                     # get list of available sizes
                     sizeList = ''
-                    product['sz'] = []
+                    #product['sz'] = []
                     for size in response.xpath('//li[@class=" enabled"]'):
                         sizeStr = size.xpath('a/span')[0].text
                         sizeList = sizeList + sizeStr + ', '
-                        product['sz'].append(sizeStr)
+                        #product['sz'].append(sizeStr)
                     sizeListLower = sizeList.lower()
                     if any(substring in sizeListLower for substring in juniorYear):
                         sex = "J"
 
                     text = "{} [{}]({}) ".format(sex, name, url)
-                    product['nm'] = name
-                    product['rl'] = url
-                    product['sc'] = row['category']
-                    product['im'] = img
+                    product['sz'] = " "+sizeList[:-2]
+                    product['sx'] = sex
+                    product['nm'] = "<a href=\""+url.encode('utf-8')+"\">"+name+"</a>"
+                    #product['rl'] = url
+                    product['sc'] = cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
+                    #product['sc'] = row['category']
+                    #product['im'] = img
                     if row['discount'] >= 60:
                         text += "**"
                     text = text + "{}->{} ({}%) [{}]".format(row['old_price'], row['price'], row['discount'],
@@ -192,7 +195,7 @@ class PrepareResults:
                     product['pr'] = row['price']
                     product['op'] = row['old_price']
                     product['dc'] = row['discount']
-                    product['pp'] = str(row['prev_price'])
+                    product['pp'] = row['prev_price']
                     product['or'] = self.operationToDescr(row['operation'], str(row['prev_price']))
                     if row['discount'] >= 60:
                         text += "**"
@@ -275,12 +278,16 @@ class PrepareResults:
 
                 text = "[{}](http://www.decathlon.pl{}) {}->{} ({}%)".format(name, prod['url'], prod['prev_price'],
                                                                              prod['price'], prod['discount'])
-                product['nm'] = name
+
+                product['nm'] = "<a href=\"http://www.decathlon.pl"+prod['url']+"\">"+name+"</a>"
                 product['rl'] = prod['url']
                 product['pr'] = prod['price']
-                product['sc'] = prod['category']
-                product['dc'] = prod['discount']
                 product['pp'] = prod['prev_price']
+                product['op'] = prod['prev_price']
+                product['or'] = "Obniżka"
+                cat = next((row for row in self.subcatData if row['subId'] == prod['category']), None)
+                if cat is not None:
+                    product['sc'] = cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
                 # additional check to be sure that the current price is the lowest to this day
                 # (checking "price history")
                 prodLowestPrice = next(
@@ -302,8 +309,8 @@ class PrepareResults:
                 con.close()
 
     def finish(self):
-        print("Więcej informacji: https://github.com/thof/decapromolist#decapromolist", file=self.mdFile)
-        print("PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)", file=self.mdFile)
+        print("Więcej informacji: https://github.com/thof/decapromolist#decapromolist"+self.SPACES, file=self.mdFile)
+        print("PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)"+self.SPACES, file=self.mdFile)
         self.mdFile.close()
         Utils.renameFile(Utils.getConfig()['decapromolistFile'])
         Utils.saveJsonFile(Utils.getConfig()['decapromolistFile'], self.products)
