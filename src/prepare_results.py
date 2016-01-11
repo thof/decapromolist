@@ -297,7 +297,7 @@ class PrepareResults:
                     text = text + " [Regularna cena była niższa {} w dn. {}]".format(prodLowestPrice['price'],
                                                                                      prodLowestPrice['date'])
                     product['rp'] = prodLowestPrice['price']
-                    product['rd'] = prodLowestPrice['date']
+                    product['rd'] = prodLowestPrice['date'].strftime("%d.%m.%Y")
                 print(text+self.SPACES, file=self.mdFile)
                 self.products.append(product)
             print("", file=self.mdFile)
