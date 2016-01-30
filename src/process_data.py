@@ -49,8 +49,8 @@ class ProcessData:
         for item in json_data:
             product = {}
             # not available products are omitted
-            if item['avail'] == self.PROD_NOT_AVAIL:
-                continue
+            # if item['avail'] == self.PROD_NOT_AVAIL:
+            #     continue
             product['id'] = long(item['id'])
             product['price'] = float(item['price'])
             product['category'] = item['cat']

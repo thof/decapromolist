@@ -32,12 +32,21 @@ class DecaParser:
             self.jsonData = json.load(json_file)
         for cat in self.jsonData:
             print cat['url']
-            try:
-                self.parse(cat['subId'], cat['url'].encode('utf-8') + "/I-Page1_10000")
-            except urllib2.HTTPError as httpError:
-                print httpError
-                if str(httpError.code)[0] == '5':
-                    self.parse(cat['subId'], cat['url'].encode('utf-8') + "/I-Page1_10000")
+            page = 0
+            while True:
+                page += 1
+                url = cat['url'].encode('utf-8') + "/I-Page{}_40".format(page)
+                print url
+                try:
+                    self.parse(cat['subId'], url)
+                except urllib2.HTTPError as httpError:
+                    print httpError
+                    if str(httpError.code)[0] == '5':
+                        self.parse(cat['subId'], url)
+                    else:
+                        break
+                except IndexError:
+                    break
         self.items = sorted(self.items, key=lambda k: (k['id']))
         Utils.deleteDuplicates(self.items)
         Utils.saveJsonFile(Utils.getConfig()['productFile'], self.items)
@@ -45,13 +54,18 @@ class DecaParser:
     def parse(self, subId, url):
         content = urllib2.urlopen(url).read()
         response = html.fromstring(content)
+        response.xpath('//li[@class="product product_normal"]')[0]
         for sel in response.xpath('//li[@class="product product_normal"]'):
             try:
                 item = {}
                 item['id'] = sel.xpath('@data-product-id')[0]
+            except IndexError:
+                print "Skipped wrong category"
+                continue
+            try:
                 item['price'] = sel.xpath('@data-product-price')[0]
                 item['url'] = sel.xpath('div//a[@class="product_name"]/@href')[0]
-                item['avail'] = sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0],
+                #item['avail'] = sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0],
                 item['cat'] = subId
                 # item['name'] = sel.xpath('@data-product-name')[0]
                 # item['descr'] = sel.xpath('div//img/@alt').extract()[0]

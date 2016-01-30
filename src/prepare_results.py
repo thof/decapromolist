@@ -119,11 +119,6 @@ class PrepareResults:
                     content = urllib2.urlopen(url).read()
                     response = html.fromstring(content)
 
-                    # when a product is out of stock then skip to the next one
-                    outOfStock = response.xpath('//link[@href="http://schema.org/OutOfStock"]')
-                    if outOfStock:
-                        continue
-
                     # get product information
                     nameCheck = ''
                     namePosStart = content.find('tc_vars')
@@ -139,6 +134,12 @@ class PrepareResults:
                     else:
                         name = name.encode('utf-8')
                     print(name+" "+url.encode('utf-8'))
+
+                    # when a product is out of stock then skip to the next one
+                    outOfStock = response.xpath('//link[@href="http://schema.org/OutOfStock"]')
+                    if outOfStock:
+                        print("Out of stock")
+                        continue
 
                     # get an image
                     imgPosStart = content.find('tc_vars["product_url_picture"]')
