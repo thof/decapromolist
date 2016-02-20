@@ -60,6 +60,9 @@
                                 var listDate = "Lista z dn. "+fileName.substring(14,16)+"."+fileName.substring(16,18)+"."+fileName.substring(18,22);
                                 document.getElementById("listDate").innerHTML = listDate;
                             }
+                            array.forEach(function(el) {
+                                console.log(el.name);
+                            });
                             
                             for (var i = 0; i < array.length; i++){
                                 if(array[i].name.localeCompare(fileName) == 0){
