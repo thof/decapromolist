@@ -1,67 +1,90 @@
-#decapromolist lista promowanych produktów (delta 13.02.2016-16.02.2016):
+#decapromolist lista promowanych produktów (delta 16.02.2016-20.02.2016):
+
+Kategoria: Turystyka, Wspinaczka->Odzież  
+F [Spódnico-spodnie turystyczne Arpenaz 100 damskie QUECHUA](http://www.decathlon.pl/spodnico-spodenki-turystyczne-damskiearpenaz-100-quechua-id_8297742.html) **79.99->22.0 (72%) [Niższa cena z 26.0]** [Rozmiary: 36, 38, 40]  
+J [Kurtka turystyczna Forclaz 900 3 w 1 Warm dla dzieci QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-zimowa-3w1-dla-dzieci-forclaz-900-id_8318182.html) 259.99->143.0 (45%) [Niższa cena z 162.0] [Rozmiary: 4 LATA, 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+J [Spodnie turystyczne 2 w 1 Forclaz 500 dla dzieci QUECHUA](http://www.decathlon.pl/spodnie-turystyczne-dla-dzieci-forclaz500-id_8301271.html) 89.99->54.0 (40%) [Niższa cena z 57.0] [Rozmiary: 4 LATA]  
+M [Kurtka turystyczna zimowa Arpenaz 700 męska QUECHUA](http://www.decathlon.pl/kurtka-arpenaz-700-szara-id_8318155.html) 199.99->122.0 (39%) [Niższa cena z 132.0] [Rozmiary: S]  
+M [Kurtka turystyczna Arpenaz 600 Rain Warm męska QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-zimowa-mska-escape-warm-bomber-id_8224610.html) 299.99->211.0 (30%) [Niższa cena z 230.0] [Rozmiary: S, M, L, XL, 2XL, 3XL]  
+M [Parka turystyczna Arpenaz 700 Rain X-Warm męska QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-zimowa-mska-parka-arpenaz-700-rain-x-warm-id_8317488.html) 349.99->258.0 (26%) [Niższa cena z 284.0] [Rozmiary: S, M, L, XL]  
+
+Kategoria: Turystyka, Wspinaczka->Obuwie  
+M [Buty turystyczne Arpenaz 500 Fresh męskie QUECHUA](http://www.decathlon.pl/buty-forclaz-500-fresh-mskie-id_8339220.html) 259.99->249.99 (4%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46]  
+M [Buty turystyczne Forclaz 500 Fresh męskie QUECHUA](http://www.decathlon.pl/buty-forclaz-500-fresh-mskie-id_8339221.html) 259.99->249.99 (4%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46]  
+F [Buty turystyczne niskie Arpenaz 200 Fresh damskie QUECHUA](http://www.decathlon.pl/buty-turystyczne-niskie-damskie-arpenaz-200-fresh-id_8329002.html) **129.99->48.0 (63%) [Wyższa cena z 39.99]** [Rozmiary: 36, 37, 38, 39, 41]  
+F [Buty turystyczne niskie Arpenaz 500 Fresh damskie QUECHUA](http://www.decathlon.pl/buty-turystyczne-niskie-damskie-arpenaz-500-fresh-beowe-id_8299102.html) 149.99->69.0 (54%) [Wyższa cena z 59.99] [Rozmiary: 36, 37, 38, 39, 40, 41, 42]  
 
 Kategoria: Turystyka, Wspinaczka->Wspinaczka, alpinizm  
-M [Koszulka wspinaczkowa długi rękaw Born Climber męska SIMOND](http://www.decathlon.pl/koszulka-born-climber-mska-id_8331315.html) 84.99->49.99 (41%) [Nowa] [Rozmiary: S, M, L, XL, 2XL]  
-F [Kurtka alpinistyczna Light damska SIMOND](http://www.decathlon.pl/kurtka-alpinist-light-damska-id_8305756.html) 539.99->429.99 (20%) [Niższa cena z 449.99] [Rozmiary: S, M, L]  
+U [Woreczek na magnezję L SIMOND](http://www.decathlon.pl/woreczek-na-magnezj-jean-l-id_8305738.html) 39.99->29.99 (25%) [Nowa]  
+M [Buty alpinistyczne Triolet Pro SCARPA](http://www.decathlon.pl/buty-alpinistyczne-mskie-triolet-pro-id_8127425.html) 1169.0->949.0 (19%) [Nowa] [Rozmiary: 41, 45, 46]  
+F [Kurtka Alpinism Light damska SIMOND](http://www.decathlon.pl/kurtka-alpinism-light-damska-id_8305756.html) 539.99->399.99 (26%) [Niższa cena z 429.99] [Rozmiary: S, M, L, XL]  
+F [Softshell alpinizm Alpin Lady damski SIMOND](http://www.decathlon.pl/softshell-alpin-lady-damski-id_8332374.html) 199.99->169.99 (15%) [Powrót] [Rozmiary: XS, S, M, L, XL]  
 
-Kategoria: Sporty Zimowe->Akcesoria narciarskie i snowboardowe  
-U [Brenda SG-107](http://www.decathlon.pl/brenda-sg-107-id_8358270.html) 199.99->149.99 (25%) [Powrót]  
+Kategoria: Fitness, Taniec, Gimnastyka->Odzież fitness  
+F [Koszulka fitness krótki rękaw Air + damska DOMYOS](http://www.decathlon.pl/koszulka-air-fitness-id_8341319.html) 24.99->19.99 (20%) [Nowa] [Rozmiary: S]  
+M [Koszulka fitness krótki rękaw DRY SKIN męska DOMYOS](http://www.decathlon.pl/koszulka-dry-skin-mska-id_8327034.html) 24.99->14.99 (40%) [Powrót] [Rozmiary: M, L, XL]  
+M [Koszulka fitness polo męska DOMYOS](http://www.decathlon.pl/koszulka-polo-niebieska-id_8342067.html) 39.99->24.99 (38%) [Powrót] [Rozmiary: 3XL]  
+M [Koszulka fitness polo męska DOMYOS](http://www.decathlon.pl/koszulka-polo-niebieska-id_8342069.html) 39.99->24.99 (38%) [Powrót] [Rozmiary: 3XL]  
+M [Koszulka fitness polo męska DOMYOS](http://www.decathlon.pl/koszulka-polo-szara-id_8342070.html) 39.99->24.99 (38%) [Powrót] [Rozmiary: XL]  
+M [Spodenki fitness LINEAR męskie ADIDAS](http://www.decathlon.pl/spodnie-fitness-adidas-linear-id_8341135.html) 159.99->99.99 (38%) [Powrót] [Rozmiary: S]  
+M [Spodenki fitness Dry Skin męskie DOMYOS](http://www.decathlon.pl/spodenki-dry-skin-id_8329850.html) 59.99->39.99 (33%) [Powrót] [Rozmiary: S]  
+F [Top fitness Shape+ damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-shape-id_8341275.html) 69.99->49.99 (29%) [Powrót] [Rozmiary: 40]  
+M [Koszulka fitness polo męska DOMYOS](http://www.decathlon.pl/koszulka-polo-bordowa-id_8342071.html) 39.99->29.99 (25%) [Powrót] [Rozmiary: M, L, XL, 2XL, 3XL]  
+F [Koszulka fitness z kapturem długi rękaw damska DOMYOS](http://www.decathlon.pl/koszulka-z-kapturem-fitness-id_8341691.html) 59.99->49.99 (17%) [Powrót] [Rozmiary: XS, S, M, L]  
 
 Kategoria: Sporty Zimowe->Sprzęt narciarski  
-U [Narty PURSUIT 100 + XELIUM 100 ROSSIGNOL](http://www.decathlon.pl/narty-pursuit-100-xelium-100-id_8358129.html) 999.99->899.99 (10%) [Nowa] [Rozmiary: 156 CM, 170 CM]  
-F [Buty narciarskie Damskie SX 80 W LANGE-DYNASTAR](http://www.decathlon.pl/buty-narciarskie-sx-80-w-id_8333152.html) 999.99->699.99 (30%) [Niższa cena z 732.0] [Rozmiary: 24,5, 25, 25,5]  
-U [Narty PURSUIT 600 BASALT +AXM110 TPI ROSSIGNOL](http://www.decathlon.pl/narty-pursuit-600-basalt-axm110-tpi-id_8358128.html) 1999.0->1499.99 (25%) [Niższa cena z 1505.0] [Rozmiary: 163 CM]  
-U [Völkl Rtm 75 Völkl](http://www.decathlon.pl/narty-volkl-rtm-75-id_8359577.html) 1399.0->1099.99 (21%) [Niższa cena z 1108.0] [Rozmiary: 159 CM, 173 CM]  
-U [Zest Trinity Wt+W9 Wt Fischer](http://www.decathlon.pl/narty-trinity-wtw9-wt-id_8358307.html) 1499.0->1199.99 (20%) [Niższa cena z 1236.0] [Rozmiary: 150 CM, 155 CM]  
-F [Alltrack 70 W Rossignol](http://www.decathlon.pl/buty-narciarskie-alltrack-70-w-id_8358228.html) 899.99->599.99 (33%) [Powrót] [Rozmiary: 23,5, 24,5, 25, 25,5, 26, 27]  
+M [Allspeed 80 Rossignol](http://www.decathlon.pl/buty-narciarskie-allspeed-80-id_8358169.html) 899.0->599.99 (33%) [Powrót] [Rozmiary: 27]  
 
 Kategoria: Rowery->Wyposażenie rowerzysty  
-U [Rękawiczki Na Rower 300 Długie Zimowe Polarowe Niebieskie B'Twin B'Twin](http://www.decathlon.pl/rkawiczki-na-rower-300-dugie-zimowe-id_8343099.html) 29.99->19.99 (33%) [Nowa] [Rozmiary: M, L, XL, 2XL]  
+U [Kask rowerowy CROSSFIRE BELL](http://www.decathlon.pl/kask-na-rower-crossfire-biay-id_8326691.html) 129.99->69.99 (46%) [Powrót z wyższą ceną z 64.99] [Regularna cena była niższa 64.99 w dn. 2015-10-12]  
+U [Kask na rower CROSSFIRE BELL](http://www.decathlon.pl/kask-na-rower-crossfire-niebieski-id_8328594.html) 129.99->69.99 (46%) [Powrót z wyższą ceną z 64.99] [Rozmiary: 50-57 CM, 54-61 CM] [Regularna cena była niższa 64.99 w dn. 2015-10-05]  
+U [Kask Rowerowy Crossfire Czerwony Bell Bell](http://www.decathlon.pl/kask-na-rower-crossfire-czerwony-id_8328593.html) 129.99->69.99 (46%) [Powrót z wyższą ceną z 64.99] [Rozmiary: 50-57 CM, 54-61 CM] [Regularna cena była niższa 64.99 w dn. 2015-10-05]  
 
-Kategoria: Rowery->Akcesoria  
-U [Lampka Rowerowa Vioo Clip 300 Pomarańczowa B'Twin](http://www.decathlon.pl/lampka-rowerowa-vioo-clip-300-pomaraczowa-id_8315431.html) 39.99->29.99 (25%) [Nowa]  
-U [Sakiewka na rower Basic 0,4 L B'TWIN](http://www.decathlon.pl/sakiewka-na-rower-basic-04-l--id_8036818.html) 24.99->19.99 (20%) [Nowa]  
-U [Bidon rowerowy Bibida 600 ml B'TWIN](http://www.decathlon.pl/bidon-rowerowy-bibida-600-ml-id_8168550.html) 5.99->4.99 (17%) [Nowa]  
+Kategoria: Bieganie, Trail->Odzież do biegania  
+M [Spodnie do biegania Kiprun męskie KALENJI](http://www.decathlon.pl/spodnie-mskie-kiprun-id_8312469.html) 119.99->79.99 (33%) [Powrót] [Rozmiary: S]  
 
-Kategoria: Bieganie, Trail->Obuwie do biegania  
-F [Buty do biegania ASICS GEL NIMBUS 17 damskie ASICS](http://www.decathlon.pl/buty-gel-nimbus-17-id_8339657.html) 499.99->419.99 (16%) [Nowa] [Rozmiary: 39, 40]  
+Kategoria: Sporty Wodne->Kostiumy, odzież, obuwie  
+F [Dół kostiumu Basic damski TRIBORD](http://www.decathlon.pl/majtki-klasyczne-basic-id_8331595.html) 29.99->24.99 (17%) [Wyższa cena z 14.99] [Rozmiary: 36, 38, 40, 48]  
+J [Sandały S100 Inj dla dzieci TRIBORD](http://www.decathlon.pl/sanday-s100-inj-jr-roowe-id_8307494.html) 29.99->24.99 (17%) [Wyższa cena z 19.99] [Rozmiary: 28/29, 30/31, 32/33, 34/35, 36/37]  
 
-Kategoria: Bieganie, Trail->Akcesoria  
-U [Czapka Wiatroszczelna Kalenji](http://www.decathlon.pl/czapka-do-biegania-przeciwwiatrowa-jz12-id_8216088.html) 29.99->19.99 (33%) [Nowa]  
-U [Rękawiczki Do Biegania Evolutiv Kalenji](http://www.decathlon.pl/rkawiczki-do-biegania-evolutiv-id_8312324.html) 49.99->34.99 (30%) [Nowa] [Rozmiary: S, M, L]  
+Kategoria: Żeglarstwo, Kajakarstwo->Kajaki  
+U [Żagiel do kajaka TRIBORD](http://www.decathlon.pl/agiel-do-kajaka-id_8321361.html) 199.99->129.99 (35%) [Powrót]  
 
-Kategoria: Jeździectwo->Sprzęt do jazdy  
-J [Amortyzator jeździecki Lena polarowo-piankowy FOUGANZA](http://www.decathlon.pl/amortyzator-lena-polar-pianka-id_8290720.html) 129.99->64.99 (50%) [Powrót]  
+Kategoria: Żeglarstwo, Kajakarstwo->Wyposażenie łodzi  
+J [Kamizelka Typhon 100N JR PLASTIMO](http://www.decathlon.pl/kamizelka-typhon-100n-jr-id_1895039.html) **189.99->69.99 (63%) [Wyższa cena z 63.0]** [Rozmiary: 1-2 LATA, 3-4 LATA, 5-6 LAT]  
 
-Kategoria: Nurkowanie->Snorkeling  
-U [Buty do wody Hawaï SEAC SUB](http://www.decathlon.pl/buty-do-wody-hawai-id_8174332.html) 29.99->19.99 (33%) [Powrót] [Rozmiary: 18/19, 20/21, 22/23                ., 26/27, 38/39, 40/41, 42/43, 44/45, 46/47]  
+Kategoria: Obuwie->Sport  
+F [Buty turystyczne Forclaz 500 Warm damskie QUECHUA](http://www.decathlon.pl/buty-zimowe-turystyczne-forclaz-500-damskie-id_8344575.html) 199.99->149.99 (25%) [Nowa] [Rozmiary: 36]  
+F [Nieprzemakalne buty turystyczne Arpenaz 700 Warm damskie QUECHUA](http://www.decathlon.pl/buty-zimowe-turystyczne-arpenaz-700-damskie-id_8313193.html) 279.99->219.0 (22%) [Niższa cena z 241.0] [Rozmiary: 36, 37, 38, 41, 42]  
+
+Kategoria: Optyka, Ochrona, Żywienie->Ochrona ciała  
+U [Namiot plażowy IWIKO 180 TRIBORD](http://www.decathlon.pl/namiot-plaowy-iwiko-180-id_8305625.html) 129.99->89.99 (31%) [Wyższa cena z 79.99]  
+
+Kategoria: Obuwie->Sport  
+M [Buty turystyczne Forclaz 500 Warm męskie QUECHUA](http://www.decathlon.pl/buty-zimowe-turystyczne-forclaz-500-mskie-id_8344557.html) 199.99->149.99 (25%) [Nowa] [Rozmiary: 40]  
+
+Kategoria: Obuwie->Obuwie junior - Sport  
+J [Buty turystyczne zimowe Arpenaz 100 Warm Novadry dla dzieci QUECHUA](http://www.decathlon.pl/buty-zimowe-turystyczne-arpenaz-100-dzieci-id_8287477.html) 89.99->49.99 (44%) [Nowa] [Rozmiary: 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]  
+
+Kategoria: Optyka, Oświetlenie->Okulary junior  
+J [Okulary przeciwsłoneczne SAMSAM dla dzieci 7 - 10 lat ORAO](http://www.decathlon.pl/samsam-kat4-biao-czerwone-id_8078253.html) 79.99->39.99 (50%) [Niższa cena z 44.99]  
 
 
-Lista przecenionych produktów (delta 13.02.2016-16.02.2016):
+Lista przecenionych produktów (delta 16.02.2016-20.02.2016):
 
-[Spodenki turystyczne Forclaz 50 damskie QUECHUA](http://www.decathlon.pl/forclaz-50-roowe-id_8355019.html) 44.99->29.99 (33%)  
-[Spodenki gimnastyczne Breathe dla dzieci szare DOMYOS](http://www.decathlon.pl/spodenki-breathe-id_8325450.html) 34.99->24.99 (28%)  
-[Spodenki gimnastyczne Breathe dla dzieci DOMYOS](http://www.decathlon.pl/spodenki-breathe-id_8325452.html) 34.99->24.99 (28%)  
-[Rybaczki 2 w 1 na rower 500 damskie B'TWIN](http://www.decathlon.pl/rybaczki-2-w-1-na-rower-500-id_8355305.html) 109.99->79.99 (27%)  
-[Zestaw pompka nożna FLP1000 + pompka ręczna MNP100 B'TWIN](http://www.decathlon.pl/kpl-pompek-flp1000mnp100-id_8303707.html) 54.99->39.99 (27%)  
-[Stopka do roweru 500 na tylny trójkąt B'TWIN](http://www.decathlon.pl/stopka-row-500-tylny-trojkt-id_8342475.html) 54.99->39.99 (27%)  
-[Zegarek bluetooth ONdaily 700 GEONAUTE](http://www.decathlon.pl/zegarek-bluetooth-ondaily-700-id_8348669.html) 369.99->279.99 (24%)  
-[Skarpety turystyczne Forclaz Mid 100 2 pary QUECHUA](http://www.decathlon.pl/skarpety-turystyczne-forclaz-100-mid-id_8329431.html) 44.99->34.99 (22%)  
-[Kurtka przeciwdeszczowa na rower 500 męska B'TWIN](http://www.decathlon.pl/kurtka-przeciwdeszczowa-500-id_8343687.html) 149.99->119.99 (20%)  
-[Kurtka przeciwdeszczowa na rower 500 męska B'TWIN](http://www.decathlon.pl/kurtka-przeciwdeszczowa-500-id_8343688.html) 149.99->119.99 (20%)  
-[Kurtka przeciwdeszczowa na rower 500 męska B'TWIN](http://www.decathlon.pl/kurtka-przeciwdeszczowa-500-id_8343692.html) 149.99->119.99 (20%)  
-[Sakwa na rower 500 20 L wodoodporna B'TWIN](http://www.decathlon.pl/sakwa-rowerowa-500-20-l-id_8355657.html) 109.99->89.99 (18%)  
-[Kamizelka jeździecka Baby granatowa FOUGANZA](http://www.decathlon.pl/kamizelka-baby-granatowa-id_8328299.html) 54.99->44.99 (18%)  
-[Klej neoprenowy SEAC](http://www.decathlon.pl/klej-neoprenowy-id_8060950.html) 29.99->24.99 (16%)  
-[Kask rowerowy 700 B'TWIN](http://www.decathlon.pl/kask-rowerowy-700-id_8354616.html) 199.99->169.99 (15%)  
-[Kalosze żeglarskie B100 TRIBORD](http://www.decathlon.pl/kalosze-b100-ote-id_8204947.html) 79.99->69.99 (12%)  
-[Buty Na Rower Mtb M089 Czarne Shimano Bertin](http://www.decathlon.pl/buty-na-rower-mtb-m089-id_8324902.html) 339.99->299.99 (11%)  
-[Bidon rowerowy Syssa 750 ml aluminium ELITE](http://www.decathlon.pl/bidon-aluminiowy-syssa-750-ml-id_8339611.html) 44.99->39.99 (11%)  
-[Sakwy Podwójne 500 1 L B'Twin](http://www.decathlon.pl/sakwy-podwojne-500-1-l-id_8353933.html) 44.99->39.99 (11%)  
-[Sakwy Podwójne 500 1 L B'Twin](http://www.decathlon.pl/sakwy-podwojne-500-1-l-id_8353934.html) 44.99->39.99 (11%)  
-[Torba rowerowa pod siodło 500 M 0,7 L B'TWIN](http://www.decathlon.pl/torba-pod-siodo-500-m-07-l-id_8354448.html) 44.99->39.99 (11%)  
-[Sakwy Podwójne 500 1 L B'Twin](http://www.decathlon.pl/sakwy-podwojne-500-1-l-id_8355059.html) 44.99->39.99 (11%)  
-[Uchwyt na bidon rowerowy Custom Race ELITE](http://www.decathlon.pl/uchwyt-na-bidon-custom-race-id_8362618.html) 44.99->39.99 (11%)  
+[Plecak turystyczny Arpenaz 20 L idealny na wędrowki trwające jeden dzień. QUECHUA](http://www.decathlon.pl/plecak-arpenaz-20-id_8330473.html) 39.99->29.99 (25%)  
+[Plecak turystyczny Arpenaz 20 l . QUECHUA](http://www.decathlon.pl/plecak-arp-20-niebieski-id_8331243.html) 39.99->29.99 (25%)  
+[Plecak turystyczny Arpenaz 20 l . QUECHUA](http://www.decathlon.pl/plecak-arpenaz-20-id_8331246.html) 39.99->29.99 (25%)  
+[Plecak turystyczny Arpenaz 20 l . QUECHUA](http://www.decathlon.pl/plecak-arp-20-czerwony-id_8331245.html) 39.99->31.0 (22%)  
+[Walkie-talkie T80 Extreme MOTOROLA](http://www.decathlon.pl/walkie-talkie-t80-extreme-id_8245297.html) 579.99->459.99 (20%)  
+[Nawijka na linkę 40 m BEUCHAT](http://www.decathlon.pl/nawijka-na-link-40-m-id_8132100.html) 29.99->24.99 (16%)  
+[Krzesiwo turystyczne Quechua QUECHUA](http://www.decathlon.pl/krzesiwo-quechua-id_8247922.html) 34.99->29.99 (14%)  
+[Zegarek-komputer nurkowy SMART MARES SPA](http://www.decathlon.pl/zegarek-komputer-nurkowy-smart-id_8360611.html) 1249.0->1099.0 (12%)  
+[Płetwy do snorkelingu 100 dla dzieci TRIBORD](http://www.decathlon.pl/petwy-100-jr-id_8334385.html) 39.99->34.99 (12%)  
+[Buty turystyczne niskie Arpenaz 500 damskie QUECHUA](http://www.decathlon.pl/buty-arpenaz-500-damskie-id_8354307.html) 169.99->149.99 (11%)  
+[Dziegieć sosnowy w aerozolu 500 ml FOUGANZA](http://www.decathlon.pl/dziegie-sosnowy-spray-500-ml-id_8341455.html) 49.99->44.99 (10%)  
+[Maść do kopyt dla koni w aerozolu 500 ml FOUGANZA](http://www.decathlon.pl/smar-do-kopyt-w-sprayu-500ml-fouganza-id_8341531.html) 49.99->44.99 (10%)  
+[Koszulka do boksu bez rękawów męska EVERLAST](http://www.decathlon.pl/koszulka-everlast-mska-id_8342307.html) 49.99->44.99 (10%)  
 
 Więcej informacji: https://github.com/thof/decapromolist#decapromolist  
 PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)  

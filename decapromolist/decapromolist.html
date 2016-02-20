@@ -12,17 +12,80 @@
     <script src="pub/db.js"></script>
     
     <script src="pub/jsgrid.min.js"></script>
+    <script src="pub/gh3.min.js"></script>
+    <script src="pub/underscore-min.js"></script>
 </head>
 <body>
     <h1><a href="https://github.com/thof/decapromolist">decapromolist</a></h1>
     <p>PayPal: <i>decapromolist@gmail.com</i> (w razie gdyby ktoś chciał wspomóc projekt)</p>
+    <h3 id="listDate">Lista</h3>
+    <h3><a href="#" id="previous">Porzednia lista</a> <--> <a href="#" id="next">Następna lista</a></h3>
     <div id="jsGrid"></div>
 
-    <script>
+    <script>    
+        $(function() {
+            var user = new Gh3.User("thof");
+            var repo = new Gh3.Repository("decapromolist", user);
+            repo.fetch(function (err, res){
+                if(err) { throw "outch ..." }
+                
+                repo.fetchBranches(function (err, res){
+                    if(err) { throw "outch ..." }
+
+                    var master = repo.getBranchByName("master");
+
+                    master.fetchContents(function (err, res){
+                        if(err) { throw "outch ..." }
+
+                        var dir = master.getDirByName("decapromolist");
+                        dir.fetchContents(function (err, res){
+                            if(err) { throw "outch ..." }
+
+                            console.log(dir.getContents());
+                            array = dir.getContents();
+                            array = array.filter(checkName);
+                            array.sort(function(a, b){
+                                if(a.name.localeCompare("decapromolist.json") == 0){
+                                    return false;
+                                }
+                                date1 = a.name.substring(18,22)+a.name.substring(16,18)+a.name.substring(14,16);
+                                date2 = b.name.substring(18,22)+b.name.substring(16,18)+b.name.substring(14,16);
+                                return parseFloat(date2) - parseFloat(date1);
+                            });
+                            fileName = getParameterByName("list");
+                            if(fileName == null || fileName.localeCompare("decapromolist.json") == 0){
+                                fileName = "decapromolist.json";
+                                document.getElementById("listDate").innerHTML = "Aktualna lista";
+                            } else {
+                                var listDate = "Lista z dn. "+fileName.substring(14,16)+"."+fileName.substring(16,18)+"."+fileName.substring(18,22);
+                                document.getElementById("listDate").innerHTML = listDate;
+                            }
+                            
+                            for (var i = 0; i < array.length; i++){
+                                if(array[i].name.localeCompare(fileName) == 0){
+                                    if(i+1<array.length){
+                                        document.getElementById("previous").href = "?list="+array[i+1].name;
+                                    }
+                                    if(i-1>=0){
+                                        document.getElementById("next").href = "?list="+array[i-1].name;
+                                    }
+                                    break;
+                                }
+                            }
+                        });
+
+                    });
+
+                })
+            });
+
+        });
+        
+    
         $(function() {
 
             $("#jsGrid").jsGrid({
-                height: "92%",
+                height: "88%",
                 width: "100%",
                 filtering: true,
                 editing: false,

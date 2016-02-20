@@ -1,11 +1,15 @@
 (function() {
+    fileName = getParameterByName("list");
+    if(fileName == null){
+        fileName = "decapromolist.json";
+    }
 
     var db = {
         loadData: function(filter) {
             var items = [];
             $.ajax({
               dataType: "json",
-              url: "decapromolist.json",
+              url: fileName,
               async: false,
               success: function(data) {
                 items = data;
@@ -69,3 +73,17 @@ function checkNumber(number, cmpNumber){
     }
 }
 
+function getParameterByName(name, url){
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function checkName(file) {
+    var match = /decapromolist.*json/.test(file.name);
+    return match;
+}
