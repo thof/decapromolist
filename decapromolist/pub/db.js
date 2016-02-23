@@ -6,6 +6,7 @@
 
     var db = {
         loadData: function(filter) {
+            setFilterValues(filter);
             var items = [];
             $.ajax({
               dataType: "json",
@@ -87,3 +88,77 @@ function checkName(file) {
     var match = /decapromolist.*json/.test(file.name);
     return match;
 }
+
+function setFilterValues(filter) {
+    !filter.sx || localStorage.setItem("filter0", filter.sx);
+    !filter.sc || localStorage.setItem("filter1", filter.sc);
+    !filter.nm || localStorage.setItem("filter2", filter.nm);
+    !filter.sz || localStorage.setItem("filter3", filter.sz);
+    !filter.op || localStorage.setItem("filter4", filter.op);
+    !filter.pr || localStorage.setItem("filter5", filter.pr);
+    !filter.dc || localStorage.setItem("filter6", filter.dc);
+    !filter.or || localStorage.setItem("filter7", filter.or);
+}
+
+function insertFilterValues() {
+    filterFields = document.getElementsByTagName("input");
+    for(var i = 2; i < 10; i++){
+        filterFields[i].value = localStorage.getItem("filter"+(i-2));
+    }
+    triggerEvent();
+}
+
+function generateUrl() {
+    var i = 0;
+    var params = "";
+    if(getParameterByName("list") != null){
+        params = params+"&list="+getParameterByName("list");    
+    }
+    params = params+"&sx="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&sc="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&nm="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&sz="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&op="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&pr="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&dc="+document.getElementsByTagName("input")[i+2].value;
+    i++;
+    params = params+"&or="+document.getElementsByTagName("input")[i+2].value;
+    document.getElementById("genLink").href = "?"+params.substring(1);
+}
+
+function getFiltersFromUrl() {
+    var array = [];
+    var filter = false;
+    filterFields = document.getElementsByTagName("input");
+    array.push(getParameterByName("sx"));
+    array.push(getParameterByName("sc"));
+    array.push(getParameterByName("nm"));
+    array.push(getParameterByName("sz"));
+    array.push(getParameterByName("op"));
+    array.push(getParameterByName("pr"));
+    array.push(getParameterByName("dc"));
+    array.push(getParameterByName("or"));
+    for(var i = 0; i < 8; i++){
+        if(array[i] != null){
+            filterFields[i+2].value = array[i];
+            filter = true;
+        }
+    }
+    if(filter){
+        triggerEvent();
+    }
+}
+
+function triggerEvent(){
+    var event = document.createEvent('Event');
+    event.initEvent('keypress', true, false);
+    event.which = 13;
+    document.getElementsByTagName("input")[2].dispatchEvent(event);
+}
+
