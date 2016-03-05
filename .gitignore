@@ -66,3 +66,6 @@ config.json
 
 # Product files
 product*.json
+jsgrid-theme.css
+jsgrid.css
+jsgrid.js
