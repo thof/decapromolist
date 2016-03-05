@@ -172,9 +172,9 @@ class PrepareResults:
                     # get list of available sizes
                     sizeList = ''
                     #product['sz'] = []
-                    for size in response.xpath('//li[@class=" enabled"]'):
-                        sizeStr = size.xpath('a/span')[0].text
-                        sizeList = sizeList + sizeStr + ', '
+                    for size in response.xpath('//li[@class=" available"]'):
+                        sizeStr = size.xpath('a')[0].text
+                        sizeList = sizeList + sizeStr.strip() + ', '
                         #product['sz'].append(sizeStr)
                     sizeListLower = sizeList.lower()
                     if any(substring in sizeListLower for substring in juniorYear):
@@ -285,6 +285,8 @@ class PrepareResults:
                 product['pr'] = prod['price']
                 product['pp'] = prod['prev_price']
                 product['op'] = prod['prev_price']
+                product['dc'] = int(100-prod['price']*100/prod['prev_price'])
+                product['sx'] = "U"
                 product['or'] = "Obniżka"
                 cat = next((row for row in self.subcatData if row['subId'] == prod['category']), None)
                 if cat is not None:
