@@ -47,7 +47,7 @@
                             array = array.filter(checkName);
                             array.sort(function(a, b){
                                 if(a.name.localeCompare("decapromolist.json") == 0){
-                                    return false;
+                                    return -1;
                                 }
                                 date1 = a.name.substring(18,22)+a.name.substring(16,18)+a.name.substring(14,16);
                                 date2 = b.name.substring(18,22)+b.name.substring(16,18)+b.name.substring(14,16);
