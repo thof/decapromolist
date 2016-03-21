@@ -29,8 +29,9 @@ class Run:
 
     print "Getting subcategories..."
     subcat = GetSubcategories()
-    subcat.getCategories()
-    subcat.getSubcategories()
+    catUrl = subcat.getCategories()
+    dataCat = subcat.getSubcategories(catUrl)
+    subcat.saveSubcategories(dataCat)
     print "Done"
 
     print "Preparing products list..."

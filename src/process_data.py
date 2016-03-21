@@ -16,7 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import json
-import re
 import MySQLdb as mdb
 import sys
 import datetime

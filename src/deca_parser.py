@@ -18,19 +18,27 @@
 import json
 import urllib2
 import re
+
 from lxml import html
 from utils import Utils
+from get_subcategories import GetSubcategories
 
 
 class DecaParser:
     def __init__(self):
-        self.jsonData = []
         self.items = []
 
     def getProducts(self):
         with open(Utils.getConfig()['subcatFile']) as json_file:
-            self.jsonData = json.load(json_file)
-        for cat in self.jsonData:
+            jsonData = json.load(json_file)
+        self.getProductsByCat(jsonData)
+        self.items = sorted(self.items, key=lambda k: (k['id']))
+        Utils.saveJsonFile(Utils.getConfig()['subcatFile'], jsonData)
+        Utils.deleteDuplicates(self.items)
+        Utils.saveJsonFile(Utils.getConfig()['productFile'], self.items)
+
+    def getProductsByCat(self, subcat):
+        for index, cat in enumerate(subcat):
             print cat['url']
             page = 0
             while True:
@@ -46,12 +54,17 @@ class DecaParser:
                     else:
                         break
                 except IndexError:
+                    if page == 1:
+                        urlCat = "{}/pl/getSubNavigationMenu?primaryCategoryId={}".format(
+                            Utils.getConfig()['siteURL'], cat['subId'])
+                        print "We need to go deeper"
+                        dataCat = GetSubcategories.getThirdLevelCat([urlCat])
+                        subcat[index+1:index+1] = dataCat
+                        self.getProductsByCat(dataCat)
                     break
-        self.items = sorted(self.items, key=lambda k: (k['id']))
-        Utils.deleteDuplicates(self.items)
-        Utils.saveJsonFile(Utils.getConfig()['productFile'], self.items)
 
     def parse(self, subId, url):
+        productCnt = 0
         content = urllib2.urlopen(url).read()
         response = html.fromstring(content)
         response.xpath('//li[@class="product product_normal"]')[0]
@@ -77,10 +90,11 @@ class DecaParser:
                     # print "Item without discount: "+item['id']+" "+item['name']
                     pass
                 self.items.append(item)
+                productCnt += 1
             except IndexError:
                 print "Skipped item: " + item['id']
                 continue
-
+        print "Product read: {}".format(productCnt)
 
 if __name__ == "__main__":
     proc = DecaParser()
