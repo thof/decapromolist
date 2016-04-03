@@ -18,6 +18,7 @@
 
 from get_subcategories import GetSubcategories
 from deca_parser import DecaParser
+from deca_parser2 import DecaParser2
 from process_data import ProcessData
 from prepare_results import PrepareResults
 from github_comm import GithubComm
@@ -35,7 +36,7 @@ class Run:
     print "Done"
 
     print "Preparing products list..."
-    parser = DecaParser()
+    parser = DecaParser2()
     parser.getProducts()
     print "Done"
 

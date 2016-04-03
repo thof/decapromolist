@@ -27,6 +27,7 @@ from get_subcategories import GetSubcategories
 class DecaParser:
     def __init__(self):
         self.items = []
+        self.counter = 0
 
     def getProducts(self):
         with open(Utils.getConfig()['subcatFile']) as json_file:
@@ -39,12 +40,13 @@ class DecaParser:
 
     def getProductsByCat(self, subcat):
         for index, cat in enumerate(subcat):
-            print cat['url']
+            #print cat['url']
+            self.counter = 0
             page = 0
             while True:
                 page += 1
                 url = cat['url'].encode('utf-8') + "/I-Page{}_40".format(page)
-                print url
+                #print url
                 try:
                     self.parse(cat['subId'], url)
                 except urllib2.HTTPError as httpError:
@@ -62,6 +64,7 @@ class DecaParser:
                         subcat[index+1:index+1] = dataCat
                         self.getProductsByCat(dataCat)
                     break
+            print "*** {} {}\n".format(cat['url'].encode('utf-8'), self.counter)
 
     def parse(self, subId, url):
         productCnt = 0
@@ -83,7 +86,8 @@ class DecaParser:
                 # item['name'] = sel.xpath('@data-product-name')[0]
                 # item['descr'] = sel.xpath('div//img/@alt').extract()[0]
                 try:
-                    item['oldPr'] = sel.xpath('div//span[@class="old_price"]/text()')[0][:-6]
+                    item['oldPr'] = sel.xpath('div//span[@class="old_price"]/text()')[0]
+                    item['oldPr'] = re.match('([0-9,]+)', item['oldPr']).group(1)
                     item['oldPr'] = float(''.join(item['oldPr'].split()).replace(",", "."))
                     item['disc'] = int(re.findall(r'\d+', sel.xpath('div//span[@class="oldPrice-percentage"]/text()')[0])[0])
                 except IndexError:
@@ -91,10 +95,11 @@ class DecaParser:
                     pass
                 self.items.append(item)
                 productCnt += 1
+                self.counter += 1
             except IndexError:
                 print "Skipped item: " + item['id']
                 continue
-        print "Product read: {}".format(productCnt)
+        #print "Product read: {}".format(productCnt)
 
 if __name__ == "__main__":
     proc = DecaParser()

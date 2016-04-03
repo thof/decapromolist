@@ -24,7 +24,7 @@ from utils import Utils
 from get_subcategories import GetSubcategories
 
 
-class DecaParser:
+class DecaParser2:
     def __init__(self):
         self.items = []
         self.counter = 0
@@ -40,17 +40,18 @@ class DecaParser:
 
     def getProductsByCat(self, subcat):
         for index, cat in enumerate(subcat):
-            print cat['url']
+            #print cat['url']
             self.counter = 0
             page = 0
             while True:
                 page += 1
-                url = cat['url'].encode('utf-8') + "/I-Page{}_40".format(page)
-                print url
+                url = "http://www.decathlon.pl/pl/getAjaxListProductNextPage?uriPage=/C-{}/I-Page{}_40".format(cat['subId'], page)
+                #print url
                 try:
                     self.parse(cat['subId'], url)
                 except urllib2.HTTPError as httpError:
                     print httpError
+                    print url
                     if str(httpError.code)[0] == '5':
                         self.parse(cat['subId'], url)
                     else:
@@ -59,16 +60,18 @@ class DecaParser:
                     if page == 1:
                         urlCat = "{}/pl/getSubNavigationMenu?primaryCategoryId={}".format(
                             Utils.getConfig()['siteURL'], cat['subId'])
-                        print "We need to go deeper"
+                        print "!!!!!! We need to go deeper {}".format(url)
                         dataCat = GetSubcategories.getThirdLevelCat([urlCat])
                         subcat[index+1:index+1] = dataCat
                         self.getProductsByCat(dataCat)
                     break
-            print cat['url']+' '+self.counter
+            print "*** {} {}\n".format(cat['url'].encode('utf-8'), self.counter)
 
     def parse(self, subId, url):
         productCnt = 0
         content = urllib2.urlopen(url).read()
+        if not content:
+            raise IndexError
         response = html.fromstring(content)
         response.xpath('//li[@class="product product_normal"]')[0]
         for sel in response.xpath('//li[@class="product product_normal"]'):
@@ -99,9 +102,9 @@ class DecaParser:
             except IndexError:
                 print "Skipped item: " + item['id']
                 continue
-        print "Product read: {}".format(productCnt)
+        #print "Product read: {}".format(productCnt)
 
 if __name__ == "__main__":
-    proc = DecaParser()
+    proc = DecaParser2()
     proc.getProducts()
     print "Done"
