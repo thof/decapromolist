@@ -77,12 +77,12 @@ class DecaParser2:
         for sel in response.xpath('//li[@class="product product_normal"]'):
             try:
                 item = {}
-                item['id'] = sel.xpath('@data-product-id')[0]
+                item['id'] = int(sel.xpath('@data-product-id')[0])
             except IndexError:
                 print "Skipped wrong category"
                 continue
             try:
-                item['price'] = sel.xpath('@data-product-price')[0]
+                item['price'] = float(sel.xpath('@data-product-price')[0])
                 item['url'] = sel.xpath('div//a[@class="product_name"]/@href')[0]
                 #item['avail'] = sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0],
                 item['cat'] = subId
@@ -90,7 +90,7 @@ class DecaParser2:
                 # item['descr'] = sel.xpath('div//img/@alt').extract()[0]
                 try:
                     item['oldPr'] = sel.xpath('div//span[@class="old_price"]/text()')[0]
-                    item['oldPr'] = re.match('([0-9,]+)', item['oldPr']).group(1)
+                    item['oldPr'] = re.match('([0-9,]+)', item['oldPr'].encode('ascii', 'ignore')).group(1)
                     item['oldPr'] = float(''.join(item['oldPr'].split()).replace(",", "."))
                     item['disc'] = int(re.findall(r'\d+', sel.xpath('div//span[@class="oldPrice-percentage"]/text()')[0])[0])
                 except IndexError:

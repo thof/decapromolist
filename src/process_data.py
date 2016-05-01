@@ -50,21 +50,24 @@ class ProcessData:
             # not available products are omitted
             # if item['avail'] == self.PROD_NOT_AVAIL:
             #     continue
-            product['id'] = long(item['id'])
-            product['price'] = float(item['price'])
-            product['category'] = item['cat']
-            # product['name'] = data['name'].encode('utf-8')
-            product['url'] = item['url'].encode('utf-8')
-            # in case of regular product add it to separate table
-            if item.get('oldPr', None) is None:
-                product['date'] = self.dateTime[:10]
-                productsRegular.append(product)
-            else:
-                product['old_price'] = item['oldPr']
-                product['discount'] = item['disc']
-                # product['description'] = data['descr'].encode('utf-8')
+            try:
+                product['id'] = long(item['id'])
+                product['price'] = float(item['price'])
+                product['category'] = item['cat']
+                # product['name'] = data['name'].encode('utf-8')
                 product['url'] = item['url'].encode('utf-8')
-                productsPromo.append(product)
+                # in case of regular product add it to separate table
+                if item.get('oldPr', None) is None:
+                    product['date'] = self.dateTime[:10]
+                    productsRegular.append(product)
+                else:
+                    product['old_price'] = item['oldPr']
+                    product['discount'] = item['disc']
+                    # product['description'] = data['descr'].encode('utf-8')
+                    product['url'] = item['url'].encode('utf-8')
+                    productsPromo.append(product)
+            except:
+                pass
         self.updateRegularProducts(productsRegular)
         self.updatePromoProducts(productsPromo)
         Utils.renameFile(Utils.getConfig()['productFile'])
