@@ -1,205 +1,234 @@
-#decapromolist lista promowanych produktów (delta 07.05.2016-13.05.2016):
+#decapromolist lista promowanych produktów (delta 13.05.2016-22.05.2016):
 
 Kategoria: Rowery->Rowery  
-U [Rower MTB ROCKRIDER 560 S B'TWIN](http://www.decathlon.pl/rower-mtb-rockrider-560-s-id_8322588.html) 3499.0->2999.0 (14%) [Nowa] [Rozmiary: M, XL]  
-U [Rower składany BFOLD 500 MATEX](http://www.decathlon.pl/bfold-500-id_8328466.html) 1199.0->999.99 (17%) [Niższa cena z 1099.0]  
+U [Rower składany BFOLD 500 MATEX](http://www.decathlon.pl/bfold-500-id_8328466.html) 1199.0->899.99 (25%) [Niższa cena z 999.99]  
 
 Kategoria: Rowery->Wyposażenie rowerzysty  
-F [Koszulka bez rękawów 700 damska B'TWIN](http://www.decathlon.pl/koszulka-bez-rkawow-700-id_8329376.html) 169.99->108.0 (36%) [Wyższa cena z 106.0] [Rozmiary: S, M, L]  
+M [Kamizelka Rowerowa Nieprzemakalna Fdj B'Twin](http://www.decathlon.pl/kamizelka-na-rower-mska-nieprzemakalna-fdj-id_8319189.html) 299.99->149.99 (50%) [Wyższa cena z 137.0] [Rozmiary: XL, 2XL]  
+M [Bluza Na Rower 520 Męska Czarno Czerwona B'Twin B'Twin](http://www.decathlon.pl/bluza-na-rower-520-mska-id_8343082.html) 329.99->249.99 (24%) [Powrót] [Rozmiary: S, XL]  
 
-Kategoria: Rowery->Akcesoria  
-U [Błotnik Rowerowy Flash Tylny B'Twin](http://www.decathlon.pl/botnik-flash-tylny-niebieski-id_8327779.html) 11.99->5.0 (58%) [Powrót]  
-
-Kategoria: Rowery->Części rowerowe  
-U [Spray Do Roweru All In One 500 Ml + 100 Ml B'Twin](http://www.decathlon.pl/spray-do-roweru-all-in-one-500-ml-100-ml-id_8315455.html) 34.99->19.99 (43%) [Nowa]  
-U [Rogi Kierownicy Light 90 Mm B'Twin](http://www.decathlon.pl/rogi-kierownicy-light-90-mm-id_8315890.html) 84.99->49.99 (41%) [Powrót]  
-
-Kategoria: Hulajnogi, Rolki, Deskorolki...->Hulajnogi  
-U [Hulajnoga TOWN 5 EF OXELO](http://www.decathlon.pl/hulajnoga-town-5-ef-niebieska-id_8317538.html) 399.99->249.99 (38%) [Powrót]  
-
-Kategoria: Hulajnogi, Rolki, Deskorolki...->Rolki  
-J [ROLKI FITNESS Diabolo dla dzieci fioletowe OXELO](http://www.decathlon.pl/rolki-diabolo-jr-fioletowe-id_8191038.html) 279.99->149.99 (46%) [Niższa cena z 199.99] [Rozmiary: 37/40]  
+Kategoria: Hulajnogi, Rolki, Deskorolki...->Deskorolki, Wavboardy  
+U [Deskorolka Cruiser YAMBA drewniana 80's OXELO](http://www.decathlon.pl/yamba-drewniana-80s-id_8352530.html) 249.99->199.99 (20%) [Nowa]  
+U [Deskorolka Cruiser YAMBA drewniana SPACE OXELO](http://www.decathlon.pl/yamba-drewniana-space-id_8352531.html) 249.99->199.99 (20%) [Nowa]  
+U [Deskorolka Cruiser YAMBA drewniana Classic OXELO](http://www.decathlon.pl/yamba-drewniana-classic-id_8352532.html) 249.99->199.99 (20%) [Nowa]  
+U [Deskorolka Cruiser YAMBA drewniana AIR OXELO](http://www.decathlon.pl/yamba-drewniana-air-id_8352533.html) 249.99->199.99 (20%) [Nowa]  
 
 Kategoria: Turystyka->Odzież  
-M [Kurtka turystyczna Arpenaz 300 Rain 3w1 męska QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-arpenaz-300-3w1-mska-id_8343502.html) 199.99->108.0 (46%) [Wyższa cena z 99.99] [Rozmiary: S, M]  
-J [Kurtka turystyczna zimowa X-light dla dzieci QUECHUA](http://www.decathlon.pl/kurtka-watowana-x-light-dzieci-id_8344212.html) **79.99->29.99 (63%) [Powrót]** [Rozmiary: 14 LAT]  
-M [Spodnie turystyczne Arpenaz 50 Winter męskie QUECHUA](http://www.decathlon.pl/spodnie-turystyczne-ciepe-arpenaz-50-mskie-id_8343380.html) 84.99->39.99 (53%) [Powrót] [Rozmiary: 50]  
-F [Kurtka turystyczna zimowa Forclaz 700 damska QUECHUA](http://www.decathlon.pl/kurtka-puchowa-forclaz-700-x-warm-damska-id_8317742.html) 299.99->149.99 (50%) [Powrót] [Rozmiary: L]  
-F [Kurtka turystyczna zimowa Toplight damska QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-watowana-toplight-damska-id_8344286.html) 189.99->99.99 (47%) [Powrót] [Rozmiary: M]  
-F [Rybaczki turystyczne Arpenaz 100 damskie QUECHUA](http://www.decathlon.pl/spodnie-arpenaz-100-damskie-id_8330086.html) 79.99->44.99 (44%) [Powrót] [Rozmiary: 38]  
-J [Softshell turystyczny Forclaz 900 dla dzieci QUECHUA](http://www.decathlon.pl/softshell-turystyczny-dla-dzieci-forclaz-900-id_8317612.html) 129.99->79.99 (38%) [Powrót] [Rozmiary: 6 LAT, 14 LAT]  
-
-Kategoria: Turystyka->Obuwie  
-F [Buty turystyczne niskie Arpenaz 500 Fresh damskie QUECHUA](http://www.decathlon.pl/buty-turystyczne-niskie-damskie-arpenaz-500-fresh-beowe-id_8299102.html) 149.99->99.99 (33%) [Wyższa cena z 79.99] [Rozmiary: 36, 37, 38, 39, 40, 41]  
+F [Sweter turystyczny Arpenaz 100 damski QUECHUA](http://www.decathlon.pl/sweter-turystyczny-damski-arpenaz-100-id_8315193.html) **59.99->19.99 (67%) [Nowa]** [Rozmiary: XS, S, M, L, XL, 2XL]  
+M [Sweter turystyczny Arpenaz Hybrid męski QUECHUA](http://www.decathlon.pl/sweter-turystyczny-z-kapturem-mski-arpenaz-600-id_8318965.html) 129.99->59.99 (54%) [Nowa] [Rozmiary: M, L, XL]  
+M [Sweter turystyczny Arpenaz 300 męski QUECHUA](http://www.decathlon.pl/sweter-arpenaz-300-mski-id_8342219.html) 79.99->39.99 (50%) [Nowa] [Rozmiary: M, L, XL, 2XL, 3XL]  
+J [Kurtka turystyczna zimowa X-light dla dzieci QUECHUA](http://www.decathlon.pl/kurtka-watowana-x-light-dzieci-id_8344213.html) 79.99->49.99 (38%) [Nowa] [Rozmiary: 5 ANS, 6 LAT, 8 LAT]  
+F [Polar turystyczny Forclaz 200 damski QUECHUA](http://www.decathlon.pl/polar-turystyczny-damski-forclaz-200-id_8317308.html) 59.99->39.99 (33%) [Nowa] [Rozmiary: S, M, L, XL, XXL]  
+F [Polar turystyczny Forclaz 400 damski QUECHUA](http://www.decathlon.pl/polar-forclaz-400-damski-id_8317421.html) 119.99->79.99 (33%) [Nowa] [Rozmiary: XS, S, M]  
+M [Polar turystyczny Forclaz 400 męski QUECHUA](http://www.decathlon.pl/polar-forclaz-400-mski-id_8317451.html) 119.99->79.99 (33%) [Nowa] [Rozmiary: S, M, L, XL, 2XL]  
+J [Polar turystyczny Forclaz 50 dla dzieci QUECHUA](http://www.decathlon.pl/polar-forclaz-50-dla-dzieci-id_8344193.html) 29.99->19.99 (33%) [Nowa] [Rozmiary: 8 LAT]  
+F [Kurtka turystyczna zimowa Forclaz 300 damska QUECHUA](http://www.decathlon.pl/kurtka-puchowa-forclaz-300-xx-light-damska-id_8318544.html) 199.99->149.99 (25%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+J [Kurtka turystyczna zimowa X-light dzieci QUECHUA](http://www.decathlon.pl/kurtka-watowana-x-light-dzieci-id_8344208.html) 79.99->59.99 (25%) [Nowa] [Rozmiary: 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+J [Kurtka turystyczna Arpenaz 500 3 w 1 dla dzieci QUECHUA](http://www.decathlon.pl/kurtka-arpenaz-500-3w1-dzieci-id_8344496.html) 149.99->79.99 (47%) [Wyższa cena z 69.99] [Rozmiary: 6 LAT]  
+F [Koszulka turystyczna krótki rękaw Arpenaz 100 damska QUECHUA](http://www.decathlon.pl/koszulka-turystyczna-z-krotkim-rkawem-arpenaz-100-damska-quechua--id_8330033.html) 34.99->22.0 (37%) [Wyższa cena z 19.99] [Rozmiary: 2XL]  
+M [Kurtka turystyczna zimowa Arpenaz 600 męska QUECHUA](http://www.decathlon.pl/kurtka-watowana-arpenaz-600-mska-id_8344414.html) 129.99->99.99 (23%) [Wyższa cena z 89.99] [Rozmiary: S, M, L, XL, 2XL, 3XL]  
+M [Kurtka turystyczna zimowa X-Light męska QUECHUA](http://www.decathlon.pl/kurtka-puchowa-x-light-mska-id_8318547.html) 149.99->119.99 (20%) [Wyższa cena z 99.99] [Rozmiary: L]  
+F [Kurtka turystyczna zimowa X-Light damska QUECHUA](http://www.decathlon.pl/kurtka-puchowa-x-light-damska-id_8344285.html) 149.99->119.99 (20%) [Wyższa cena z 99.99] [Rozmiary: XS]  
+M [Kurtka turystyczna Arpenaz 300 Rain 3 w 1 męska QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-arpenaz-300-3w1-mska-id_8343845.html) 199.99->161.0 (19%) [Wyższa cena z 149.99] [Rozmiary: S, M]  
+J [Kurtka turystyczna Rain-Cut na zamek dla dzieci QUECHUA](http://www.decathlon.pl/kurtka-turystyczna-lekka-dla-dzieci-rain-cut-id_8331744.html) 44.99->19.99 (56%) [Niższa cena z 29.0] [Rozmiary: 12 lat, 14 lat]  
+J [Spodenki turystyczne Arpenaz 500 dla dzieci QUECHUA](http://www.decathlon.pl/spodenki-turystyczne-dla-dzieci-arpenaz500-id_8303125.html) 49.99->24.99 (50%) [Niższa cena z 27.0] [Rozmiary: 4 LATA, 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+F [Spodnie turystyczne Forclaz 100 warm damskie QUECHUA](http://www.decathlon.pl/spodnie-turystyczne-ciepe-forclaz-100-damskie-id_8316782.html) 129.99->69.99 (46%) [Powrót] [Rozmiary: 48]  
+M [Spodnie turystyczne Forclaz 500 Warm męskie QUECHUA](http://www.decathlon.pl/spodnie-turystyczne-ciepe-forclaz-500-mskie-id_8282495.html) 199.99->119.99 (40%) [Powrót] [Rozmiary: 44]  
+F [Polar turystyczny Forclaz 50 damski QUECHUA](http://www.decathlon.pl/polar-turystyczny-na-zamek-damski-forclaz-50-id_8226618.html) 39.99->29.99 (25%) [Powrót z wyższą ceną z 24.99] [Rozmiary: M, L, XL, 2XL]  
 
 Kategoria: Fitness, Taniec, Gimnastyka->Odzież fitness  
-F [Rybaczki do fitnessu damskie ADIDAS](http://www.decathlon.pl/rybaczki-do-fitnessu-adidas-id_8326028.html) 99.99->60.0 (40%) [Powrót z wyższą ceną z 49.99] [Rozmiary: XS]  
+F [Rybaczki do łagodnej gimnastyki, jogi damskie szare z bawełny organicznej DOMYOS](http://www.decathlon.pl/rybaczki-fitness-damskie-z-baweny-organicznej-id_8278571.html) 39.99->19.99 (50%) [Nowa] [Rozmiary: XS]  
+F [Legginsy do jogi 7/8 Yoga+ damskie DOMYOS](http://www.decathlon.pl/legginsy-7-8-yoga-do-jogi-id_8326067.html) 79.99->39.99 (50%) [Nowa] [Rozmiary: XS, S, M, L, XL]  
+F [Majtki fitness oddychające damskie DOMYOS](http://www.decathlon.pl/majtki-fitness-oddychajce-id_8340989.html) 39.99->19.99 (50%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46, 48]  
+F [Rybaczki fitness Essentiel damskie DOMYOS](http://www.decathlon.pl/rybaczki-essentiel-do-fitnessu-id_8352557.html) 39.99->19.99 (50%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL]  
+F [Koszulka fitness krótki rękaw Essentiel damska DOMYOS](http://www.decathlon.pl/koszulka-essentiel-fitness-id_8352549.html) 24.99->14.99 (40%) [Nowa] [Rozmiary: M, L, XL, 2XL]  
+F [Spodnie dresowe fitness damskie DOMYOS](http://www.decathlon.pl/spodnie-damskie-do-fitnessu-id_8341996.html) 59.99->44.99 (25%) [Nowa] [Rozmiary: XS, S, M, L, XL]  
+F [Top fitness Active damski DOMYOS](http://www.decathlon.pl/koszulka-active-fitness-id_8351994.html) 39.99->29.99 (25%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL]  
+F [Stanik fitness CONFORT+ BRA PAD DOMYOS](http://www.decathlon.pl/stanik-confort-bra-pad-id_8352420.html) 39.99->29.99 (25%) [Nowa] [Rozmiary: 36, 38, 40, 42]  
+F [Legginsy fitness SALTO damskie DOMYOS](http://www.decathlon.pl/legginsy-salto-fitness-id_8352519.html) 19.99->14.99 (25%) [Nowa] [Rozmiary: 38, 40, 42, 44, 46]  
+F [Legginsy fitness Salto damskie DOMYOS](http://www.decathlon.pl/legginsy-salto-fitness-id_8352520.html) 19.99->14.99 (25%) [Nowa] [Rozmiary: 36, 38, 44, 46]  
+F [Legginsy fitness 7/8 ENERGY+ damskie DOMYOS](http://www.decathlon.pl/legginsy-7-8-energy-fitness-id_8351864.html) 64.99->49.99 (23%) [Nowa] [Rozmiary: 36, 38, 40, 44]  
+F [Spodnie dresowe do jogi damskie DOMYOS](http://www.decathlon.pl/spodnie-dresowe-fitness-damskie-id_8312866.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL, 3XL]  
+F [Legginsy do jogi damskie DOMYOS](http://www.decathlon.pl/legginsy-do-jogi-damskie-id_8326073.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL]  
+F [Legginsy do jogi damskie DOMYOS](http://www.decathlon.pl/legginsy-do-jogi-damskie-id_8326074.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL]  
+F [Koszulka fitness krótki rękaw ENERGY+ damska DOMYOS](http://www.decathlon.pl/koszulka-energy-do-fitnessu-id_8351870.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44]  
+F [Bluza z kapturem na zamek fitness ENERGY+ damska DOMYOS](http://www.decathlon.pl/bluza-energy-do-fitnessu-id_8351871.html) 99.99->79.99 (20%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Top fitness ENERGY+ damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351872.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Top do fitnessu damski ADIDAS](http://www.decathlon.pl/koszulka-bez-rkawow-adidas-id_8352075.html) 99.99->79.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL]  
+F [Top fitness REPEAT damski NIKE](http://www.decathlon.pl/koszulka-nike-damska-roowa-id_8352095.html) 99.99->79.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL]  
+F [Legginsy do jogi damskie DOMYOS](http://www.decathlon.pl/legginsy-do-jogi-damskie-id_8352391.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL]  
+F [Spodnie dresowe do jogi damskie DOMYOS](http://www.decathlon.pl/spodnie-do-jogi-bawena-eko-id_8352392.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: XS, M, L, XL, 2XL, 3XL]  
+F [Koszulka fitness krótki rękaw ESSENTIEL damska DOMYOS](http://www.decathlon.pl/koszulka-essentiel-fitness-id_8352548.html) 24.99->19.99 (20%) [Nowa] [Rozmiary: XS, S, M, L, XL, 2XL, 3XL]  
+F [Legginsy fitness FIT+ Slim 7/8 damskie DOMYOS](http://www.decathlon.pl/legginsy-slim-7-8-fit-fitness-id_8352634.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44]  
+F [Buty fitness 360+ damskie DOMYOS](http://www.decathlon.pl/buty-fitness-damskie-360-id_8287496.html) 179.99->149.99 (17%) [Nowa] [Rozmiary: 36, 37, 38, 39, 40, 41]  
+M [Koszulka fitness krótki rękaw MUSCLE męska DOMYOS](http://www.decathlon.pl/koszulka-muscle-id_8342731.html) 59.99->49.99 (17%) [Nowa] [Rozmiary: M, L, 2XL]  
+F [Top fitness oddychający ENERGY damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351866.html) 29.99->24.99 (17%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Top fitness oddychający ENERGY damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351867.html) 29.99->24.99 (17%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Top fitness oddychający ENERGY damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351868.html) 29.99->24.99 (17%) [Nowa] [Rozmiary: 36, 38, 42, 44]  
+F [Top fitness oddychający ENERGY damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351883.html) 29.99->24.99 (17%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Top fitness oddychający ENERGY damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351884.html) 29.99->24.99 (17%) [Nowa] [Rozmiary: 42]  
+F [Spodenki fitness ENERGY XTREME damskie DOMYOS](http://www.decathlon.pl/spodenki-energy-xtreme-id_8351904.html) 69.99->59.99 (14%) [Nowa] [Rozmiary: 34, 36, 38, 40, 42, 44]  
+F [Top fitness ENERGY XTREME damski z wszytym stanikiem DOMYOS](http://www.decathlon.pl/koszulka-energy-xtrem-fitness-id_8351896.html) 79.99->69.99 (13%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44]  
+F [Bluza na zamek fitness ENERGY damska DOMYOS](http://www.decathlon.pl/bluza-energy-do-fitnessu-id_8351903.html) 79.99->69.99 (13%) [Nowa] [Rozmiary: 36, 38, 40, 42, 46]  
+M [Koszulka fitness krótki rękaw ENERGY XTREME męska DOMYOS](http://www.decathlon.pl/koszulka-energy-xtreme-id_8352579.html) 79.99->69.99 (13%) [Nowa] [Rozmiary: M, L, XL, 2XL]  
+M [Koszulka fitness krótki rękaw MUSCLE męska DOMYOS](http://www.decathlon.pl/koszulka-muscle-id_8352864.html) 39.99->34.99 (13%) [Nowa] [Rozmiary: M, L, 2XL]  
+F [Top fitness ENERGY+ damski DOMYOS](http://www.decathlon.pl/koszulka-bez-rkawow-energy-id_8351873.html) 49.99->44.99 (10%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Rybaczki fitness SHAPE + damskie DOMYOS](http://www.decathlon.pl/rybaczki-fitness-shape--id_8326978.html) 59.99->54.99 (8%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Top fitness ENERGY+ damski DOMYOS](http://www.decathlon.pl/koszulka-2-w-1-energy-fitness-id_8351887.html) 59.99->54.99 (8%) [Nowa] [Rozmiary: 36, 38, 40, 42, 44, 46]  
+F [Spodnie dresowe fitness DECADA damskie ADIDAS](http://www.decathlon.pl/spodnie-do-fitnessu-decada-id_8352343.html) 129.99->119.99 (8%) [Nowa] [Rozmiary: L] [Regularna cena była niższa 109.99 w dn. 2015-12-14]  
+F [Legginsy fitness BREATHE damskie DOMYOS](http://www.decathlon.pl/legginsy-fitness-damskie-id_8312059.html) 59.99->34.99 (42%) [Powrót] [Rozmiary: 42]  
+M [Koszulka fitness męska LINEAR ADIDAS](http://www.decathlon.pl/koszulka-fitness-linear-id_8341130.html) 69.99->64.99 (7%) [Powrót] [Rozmiary: 2XL]  
 
 Kategoria: Fitness, Taniec, Gimnastyka->Odzież fitness dla dzieci  
-J [Dres do gimnastyki Warm'Y dla dzieci DOMYOS](http://www.decathlon.pl/dres-warmy-do-fitnessu-id_8341766.html) 39.99->29.99 (25%) [Niższa cena z 36.0] [Rozmiary: 5 ANS, 6 LAT, 14 LAT]  
-J [Dres do gimnastyki Warm'Y dla dzieci DOMYOS](http://www.decathlon.pl/dres-warmy-do-fitnessu-id_8341767.html) 39.99->29.99 (25%) [Niższa cena z 36.0] [Rozmiary: 6 LAT]  
-J [Dres do gimnastyki Warm'Y dla dzieci DOMYOS](http://www.decathlon.pl/dres-fitness-dla-dzieci-id_8312159.html) 29.99->19.99 (33%) [Powrót] [Rozmiary: 10 LAT]  
+J [Kamizelka z kapturem dla maluchów DOMYOS](http://www.decathlon.pl/kamizelka-dla-maluchow-z-kapturem-id_8298636.html) **34.99->9.99 (71%) [Nowa]** [Rozmiary: 18 MIESIECY, 3 JAAR, 4 LATA]  
+J [Rybaczki do gimnastyki DECADIA dla dzieci ADIDAS](http://www.decathlon.pl/rybaczki-decadia-adidas-id_8351592.html) 79.99->49.99 (38%) [Nowa] [Rozmiary: 10 LAT, 12 LAT]  
+J [Rybaczki fitness Breathe dla dzieci DOMYOS](http://www.decathlon.pl/rybaczki-breathe-czarno-roowe-id_8324731.html) 29.99->19.99 (33%) [Nowa] [Rozmiary: 5 ANS, 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+J [Legginsy do gimnastyki dla dzieci DOMYOS](http://www.decathlon.pl/legginsy-oddychajce-id_8324735.html) 39.99->29.99 (25%) [Nowa] [Rozmiary: 5 ANS, 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+J [Koszulka do gimnastyki krótki rękaw COMFORT+ dla dzieci DOMYOS](http://www.decathlon.pl/koszulka-comfort-do-fitnessu-id_8351607.html) 19.99->14.99 (25%) [Nowa] [Rozmiary: 5 ANS, 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+J [Koszulka do gimnastyki krótki rękaw COMFORT+ dla dzieci DOMYOS](http://www.decathlon.pl/koszulka-comfort-do-fitnessu-id_8351608.html) 19.99->14.99 (25%) [Nowa] [Rozmiary: 5 ANS, 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+J [Dres do gimnastyki DECADIA dla dzieci ADIDAS](http://www.decathlon.pl/dres-decadia-id_8350983.html) 149.99->119.99 (20%) [Nowa] [Rozmiary: 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT, 16 LAT]  
+J [Dres do gimnastyki DECADIA dla dzieci ADIDAS](http://www.decathlon.pl/dres-decadia-id_8350984.html) 149.99->119.99 (20%) [Nowa] [Rozmiary: 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT, 16 LAT]  
+J [Dres dla maluchów ADIDAS](http://www.decathlon.pl/dres-adidas-dla-maluchow-id_8352364.html) 109.99->89.99 (18%) [Nowa] [Rozmiary: 12 MIESIACE, 18 MIESIACE, 2 LATA, 3 LATA, 4 LATA]  
+J [Spodnie dresowe do gimnastyki ENERGY dla dzieci DOMYOS](http://www.decathlon.pl/spodnie-energy-do-fitnessu-id_8341764.html) 69.99->59.99 (14%) [Nowa] [Rozmiary: 12 LAT, 14 LAT]  
+J [Komplet dla maluchów PUMA](http://www.decathlon.pl/komplet-dla-maluchow-puma-id_8352487.html) 74.99->69.99 (7%) [Nowa] [Rozmiary: 12 MIESIACE, 18 MIESIACE, 2 LATA, 3 LATA, 4 LATA]  
+J [Dres do gimnastyki Gym'Y dla dzieci DOMYOS](http://www.decathlon.pl/dres-fitness-dla-dzieci-gymy-id_8278239.html) 29.99->14.99 (50%) [Niższa cena z 19.99] [Rozmiary: 6 LAT, 10 LAT, 12 LAT]  
+J [Koszulka golf do zajęć sportowych dla maluchów z bawełny organicznej DOMYOS](http://www.decathlon.pl/golf-fitness-dla-maluchow-id_8279388.html) 19.99->9.99 (50%) [Niższa cena z 17.99] [Rozmiary: 6 MIESIECY, 12 MIESIECY, 18 MIESIECY, 2 LATA, 3 JAAR, 4 LATA]  
+J [Dres do gimnastyki Gym'Y dla dzieci DOMYOS](http://www.decathlon.pl/dres-fitness-dla-dzieci-id_8312373.html) 29.99->19.99 (33%) [Powrót] [Rozmiary: 8 LAT, 10 LAT]  
+J [Bluza z kapturem na zamek fitness dla dzieci ADIDAS](http://www.decathlon.pl/bluza-z-kapturem-adidas-id_8341746.html) 159.99->109.99 (31%) [Powrót z niższą ceną z 111.0] [Rozmiary: 14 LAT]  
 
 Kategoria: Pływanie, Triathlon->Stroje pływackie  
-J [Kąpielówki chłopięce BASICYOKE czerwono-białe NABAIJI](http://www.decathlon.pl/slipki-basicyoke-czerw-biae-id_8307162.html) 29.99->22.0 (27%) [Niższa cena z 23.0] [Rozmiary: 12 lat, 14 lat]  
-F [Kostium jednoczęściowy pływacki Shani slim damski NABAIJI](http://www.decathlon.pl/1cz-shani-slim-all-cara-nieb-id_8335138.html) 99.99->89.0 (11%) [Niższa cena z 89.99] [Rozmiary: 50]  
-
-Kategoria: Pływanie, Triathlon->Nauka pływania, baseny  
-U [Pull buoy pływacki NABAIJI](http://www.decathlon.pl/pull-buoy-roowy-id_8117143.html) 24.99->18.0 (28%) [Powrót z niższą ceną z 19.0]  
+U [Top Kloupi Girl Fioletowo/Różowy Nabaiji](http://www.decathlon.pl/top-kloupi-girl-fioletowo-roowy-id_8197106.html) 39.99->34.99 (13%) [Powrót] [Rozmiary: 3 JAAR]  
 
 Kategoria: Sporty Rakietowe->Tenis  
-M [Buty do tenisa Babolat V Pro 2 męskie BABOLAT VS](http://www.decathlon.pl/babolat-v-pro-2-m-id_8295112.html) 349.99->224.0 (36%) [Powrót z wyższą ceną z 199.99] [Rozmiary: 41]  
+J [Spodnie termiczne Artengo 800 dla dzieci czarne ARTENGO](http://www.decathlon.pl/spodnie-termiczne-artengo-800-id_8311747.html) 69.99->49.99 (29%) [Nowa] [Rozmiary: 10 lat, 12 lat]  
+U [Czapka z daszkiem sporty rakietowe ARTENGO](http://www.decathlon.pl/czapka-z-daszkiem-artengo-700-id_8166931.html) 19.99->18.0 (10%) [Wyższa cena z 17.0]  
 
-Kategoria: Jeździectwo->Odzież jeździecka  
-J [Rękawiczki jeździeckie ciepłe Polargrip FOUGANZA](http://www.decathlon.pl/ciepe-rkawiczki-polargrip-br-id_8340872.html) 44.99->28.0 (38%) [Niższa cena z 29.99] [Rozmiary: S/M, L/XL]  
-J [Rękawiczki jeździeckie ciepłe Easywear dla dzieci FOUGANZA](http://www.decathlon.pl/rkawiczki-easywear-dla-dzieci-id_8340644.html) 34.99->23.0 (34%) [Powrót z wyższą ceną z 19.99] [Rozmiary: 4 - 6 ANS]  
+Kategoria: Sporty Rakietowe->Tenis stołowy  
+U [Okładzina do tenisa stołowego Blue Fire M3 DONIC](http://www.decathlon.pl/okadzina-donic-blue-fire-m3--id_8286958.html) 189.99->119.99 (37%) [Nowa] [Rozmiary: MAXROUGE, MAXNOIR]  
+U [Stół do tenisa stołowego 250 Indoor CORNILLEAU](http://www.decathlon.pl/sto-250-indoor-id_8352966.html) 1449.0->1299.0 (10%) [Powrót]  
+
+Kategoria: Sporty Rakietowe->Pozostałe sporty rakietowe  
+U [Zestaw do speedmintona przenośny SPEEDMINTON](http://www.decathlon.pl/zestaw-do-speedmintona-s65-id_8339890.html) 219.99->149.99 (32%) [Powrót]  
 
 Kategoria: Jeździectwo->Sprzęt do jazdy  
-J [Amortyzator jeździecki Lena polarowo-piankowy FOUGANZA](http://www.decathlon.pl/amortyzator-lena-polar-pianka-id_8290720.html) 129.99->66.0 (49%) [Powrót]  
-
-Kategoria: Jeździectwo->Dla konia  
-J [Skrzynka na przybory pielęgnacyjne GB 700 FOUGANZA](http://www.decathlon.pl/skrzynka-gb-700-czarna-id_8103675.html) 109.99->59.0 (46%) [Powrót]  
-J [Zestaw do czyszczenia 7 szczotek Etoile VALE BROTHERS LTD](http://www.decathlon.pl/zestaw-7-szczotek-etoile-id_8327973.html) 84.99->59.99 (29%) [Powrót]  
+J [Wkładki do ochraniaczy tylnych strychulców Pro Tech'Style FOUGANZA](http://www.decathlon.pl/wkadki-do-strychulcow-style-id_8281829.html) 34.99->24.99 (29%) [Wyższa cena z 19.99]  
+J [Amortyzator jeździecki Lena polarowo-piankowy FOUGANZA](http://www.decathlon.pl/amortyzator-lena-polar-pianka-id_8290720.html) 129.99->99.99 (23%) [Wyższa cena z 66.0]  
 
 Kategoria: Bieganie, Trail->Obuwie do biegania  
-M [Buty do biegania NOVA BOUNCE męskie ADIDAS](http://www.decathlon.pl/buty-adidas-nova-bounce-id_8353372.html) 299.99->169.99 (43%) [Niższa cena z 249.99] [Rozmiary: 40, 41, 42, 43, 44, 45, 46]  
+F [Buty do biegania NOVA BOUNCE damskie ADIDAS](http://www.decathlon.pl/buty-adidas-nova-bounce-id_8353370.html) 299.99->169.99 (43%) [Powrót z niższą ceną z 249.99] [Rozmiary: 37, 38, 39, 40, 41]  
 
-Kategoria: Piłka nożna->Buty piłkarskie  
-U [Buty do piłki nożnej Kaiser Liga FG korki ADIDAS](http://www.decathlon.pl/buty-fg-kaiser-liga-id_8324539.html) 269.99->239.99 (11%) [Powrót] [Rozmiary: 45]  
-U [Buty do piłki nożnej Extremis SG korki UMBRO](http://www.decathlon.pl/korki-do-gry-w-pik-non--id_8310532.html) 119.99->87.0 (27%) [Powrót z wyższą ceną z 85.0] [Rozmiary: 41, 42, 43, 44, 45, 47]  
+Kategoria: Bieganie, Trail->Akcesoria  
+U [Opaska na smartfon do biegania KALENJI](http://www.decathlon.pl/opaska-na-rami-na-smartfon-id_8325338.html) 29.99->24.99 (17%) [Powrót] [Rozmiary: LARGE]  
 
-Kategoria: Odzież piłkarska->Bielizna termoaktywna  
-J [Podkoszulek długi rękaw do sportów zespołowych KEEPDRY 500 dla dzieci KIPSTA](http://www.decathlon.pl/podkoszulek-dugi-rkaw-dla-dzieci-szary-id_8278597.html) 49.99->34.99 (30%) [Niższa cena z 39.99] [Rozmiary: 10 LAT, 14 LAT]  
+Kategoria: Piłki, bramki i wyposażenie bramkarza->Piłki  
+U [Piłka do piłki nożnej Capitano Champions League ADIDAS](http://www.decathlon.pl/pika-capitano-liga-mistrzow-id_8351694.html) 69.99->59.99 (14%) [Niższa cena z 64.99]  
 
-Kategoria: Gry zespołowe->Koszykówka  
-U [Piłka do koszykówki NBA Grafitti rozmiar 7 SPALDING](http://www.decathlon.pl/pika-nba-grafitti-rozm-7-id_8351010.html) 139.99->99.99 (29%) [Nowa]  
+Kategoria: Piłkarski Sklep Kibica->Koszulki i piłki reprezentacji  
+U [Koszulka krótki rękaw do piłki nożnej Brazylia NIKE](http://www.decathlon.pl/koszulka-do-piki-nonej-krotki-rkaw-replika-brazylia-id_8295691.html) 349.99->249.99 (29%) [Wyższa cena z 197.0] [Rozmiary: XL]  
+U [Spodenki do piłki nożnej F500 Włochy KIPSTA](http://www.decathlon.pl/spodenki-do-piki-nonej-f500-wochy-id_8298264.html) 39.99->24.99 (38%) [Powrót] [Rozmiary: 2XL]  
 
-Kategoria: Wędki, kołowrotki, zestawy->Kołowrotki  
-U [Kołowrotek wędkarski Sienna 2500 FD SHIMANO](http://www.decathlon.pl/koowrotek-lekki-sienna-2500fd-id_8094630.html) 129.99->99.99 (23%) [Nowa]  
+Kategoria: Gry zespołowe->Siatkówka  
+U [Piłka do siatkówki MVA 330 MIKASA](http://www.decathlon.pl/pika-mva-330-id_8364541.html) 109.99->99.99 (9%) [Nowa]  
 
-Kategoria: Wędkarstwo karpiowe->Akcesoria do montażu zestawów karpiowych  
-U [Żyłka Fluoro PHEN X 20 m carp CARP SPIRIT](http://www.decathlon.pl/yka-fluoro-phen-x-20-m-carp-id_8239791.html) 24.99->17.0 (32%) [Powrót] [Rozmiary: 60/100]  
+Kategoria: Trening i akcesoria->Odzież treningowa  
+U [Spodenki do piłki nożnej Parma ADIDAS](http://www.decathlon.pl/spodenki-do-piki-nonej-parma-czarne-id_8009646.html) 49.99->39.99 (20%) [Nowa] [Rozmiary: XL]  
 
-Kategoria: Wyposażenie wędkarza->Narzędzia wędkarskie  
-U [Przelotka wędki BSAT AUTAIN PECHE](http://www.decathlon.pl/przelotka-wdki-bsat-id_8167255.html) 14.99->7.0 (53%) [Powrót] [Rozmiary: 2, 2,2, 2,4, 2,6, 2,8, 3, 3,2, 4]  
-
-Kategoria: Akcesoria wędkarskie->Zanęty, dodatki do zanęt, pasty, akcesoria do nęcenia  
-U [Zanęta Gooster Domowa CAPERLAN](http://www.decathlon.pl/zanta-gooster-domowa-id_8306248.html) 24.99->23.0 (8%) [Powrót z wyższą ceną z 22.0]  
-
-Kategoria: Akcesoria wędkarskie->Wahadłówki, błystki obrotowe, spinnerbaity  
-U [Błystka Ponga nr 4 CAPERLAN](http://www.decathlon.pl/bystka-obrotowa-nr-4-ponga-id_6364718.html) 19.99->14.0 (30%) [Nowa]  
-
-Kategoria: Akcesoria wędkarskie->Woblery, poppery, jerki, swimbaity  
-U [Wobler Original Floating rapala](http://www.decathlon.pl/wobler-pywajcy-5-mn-id_4274867.html) 34.99->26.0 (26%) [Powrót] [Rozmiary: 5 CM]  
-
-Kategoria: Akcesoria wędkarskie->Przynęty morskie, pilkery, przywieszki  
-U [Błystka morska Seaspoon 120 g CAPERLAN](http://www.decathlon.pl/bystka-seaspoon-120-g-id_8315026.html) 19.99->13.0 (35%) [Powrót]  
-U [Przywieszka wędkarska morska Seamer 5 haczyków nr 2 FLASHMER](http://www.decathlon.pl/przywieszki-morskie-wdkarskie-seamer-nr-2-id_6218479.html) 7.99->7.0 (12%) [Powrót] [Rozmiary: BLANC, ROUGE, ROUGE JAUNE]  
-U [Przywieszka wędkarska morska Seamer 7 haczyków nr 1/0 FLASHMER](http://www.decathlon.pl/przywieszka-seamer-7-h-nr-1-0-id_6218495.html) 12.99->9.0 (31%) [Powrót z wyższą ceną z 8.0] [Rozmiary: ROUGE, ROUGE JAUNE]  
-
-Kategoria: Akcesoria wędkarskie->Spławiki, stopery, świetliki, akcesoria do montażu  
-U [Zestaw RL Match H16 4+4 g CAPERLAN](http://www.decathlon.pl/zestaw-rl-match-h16-44-g-id_8328160.html) 19.99->18.39 (8%) [Powrót]  
+Kategoria: Trening i akcesoria->Bielizna do gier zespołowych  
+U [Podkoszulek długi rękaw oddychający Keepdry 500 KIPSTA](http://www.decathlon.pl/koszulka-dugi-rkaw-id_8278617.html) 59.99->49.99 (17%) [Wyższa cena z 43.0] [Rozmiary: 2XL]  
 
 Kategoria: Akcesoria wędkarskie->Haczyki, kotwice, linki i przypony na drapieżniki  
-U [Kotwiczki wędkarskie trójramienne niklowane 9649NI VMC](http://www.decathlon.pl/kotwiczki-trojramienne-9649ni-id_1589779.html) 14.99->10.0 (33%) [Powrót] [Rozmiary: 4, 6, 8, 10, 12, 14]  
-U [Haczyki wędkarskie Ryder Double Brase VMC](http://www.decathlon.pl/ryder-double-brase-id_1589787.html) 13.99->10.0 (29%) [Powrót] [Rozmiary: 1, 2, 4, 6]  
-U [Kotwiczki wędkarskie trójramienne 9607BZ VMC](http://www.decathlon.pl/kotwiczki-trojramienne-9607bz-id_1589833.html) 19.99->14.99 (25%) [Powrót] [Rozmiary: 4, 6]  
-U [Kotwiczki wędkarskie morskie 9617 PS Treble O Shaugnessy x 5 VMC](http://www.decathlon.pl/kotwice-wdkarskie-morskie-vmc-9617-ps-7-0-oshaughnessy--id_6146966.html) 22.99->18.0 (22%) [Powrót]  
-U [Haczyki morskie 9291 NI nr 1 na robaka x 50 VMC](http://www.decathlon.pl/haczyki-9291-ni-nr-1-0-na-robaka-id_4870818.html) 23.99->13.0 (46%) [Powrót z wyższą ceną z 9.99] [Rozmiary: 1/0]  
-U [Kotwiczka trójramienna Vanadium 8540BK VMC](http://www.decathlon.pl/kotwiczki-trojramienne-8540bk-id_1590009.html) 24.99->16.0 (36%) [Powrót z wyższą ceną z 14.99] [Rozmiary: 4, 6, 8, 10, 12]  
-U [Kevlar wędkarski przyponowy 10 m TORTUE](http://www.decathlon.pl/kevlar-wdkarski-przyponowy-10m--id_1588608.html) 39.99->26.0 (35%) [Powrót z wyższą ceną z 19.99] [Rozmiary: ., .]  
-U [Haczyki wędkarskie morskie 8299  PO Otopus x 25 VMC](http://www.decathlon.pl/haczyki-8299-spo-inox-octopus-id_1590327.html) 23.99->16.0 (33%) [Powrót z wyższą ceną z 14.99] [Rozmiary: 2/0, 1/0, 1, 2]  
-U [Kotwice morskie wędkarskie trójramienne OShaughnessy 9617PS x 5 VMC](http://www.decathlon.pl/kotwice-morskie-wdkarskie-vmc-9617-ps-oshaughnessy-id_6146958.html) 19.99->11.0 (45%) [Powrót z niższą ceną z 13.0] [Rozmiary: 5/0, 3/0]  
+U [Haczyki morskie 9291 NI nr 1 na robaka x 50 VMC](http://www.decathlon.pl/haczyki-9291-ni-nr-1-0-na-robaka-id_4870818.html) 23.99->19.99 (17%) [Wyższa cena z 13.0] [Rozmiary: 1/0]  
 
-Kategoria: Akcesoria wędkarskie->Agrafki, krętliki, koraliki, przypony morskie  
-U [Krętliki wędkarskie niklowane z agrafką x 25 FLASHMER](http://www.decathlon.pl/krtliki-niklowane-z-agrafk-id_1585765.html) 14.99->8.0 (47%) [Powrót] [Rozmiary: 5]  
-U [Kółka łącznikowe profilowane x 10 FLASHMER](http://www.decathlon.pl/koka-cznikowe-wdkarskie-profilowane-id_1585846.html) 5.99->4.0 (33%) [Powrót] [Rozmiary: 6MM, 8MM]  
+Kategoria: Chodzenie->Obuwie miejskie  
+M [Buty do aktywnego marszu Zetroc męskie ADIDAS](http://www.decathlon.pl/buty-zetroc-id_8355379.html) 199.99->129.99 (35%) [Nowa] [Rozmiary: 45, 46]  
+M [Buty do aktywnego marszu Carson damskie PUMA](http://www.decathlon.pl/buty-carson-id_8352606.html) 219.99->149.99 (32%) [Nowa] [Rozmiary: 36, 39, 40, 42]  
+M [Buty do aktywnego marszu Carson męskie PUMA](http://www.decathlon.pl/buty-carson-id_8350875.html) 219.99->159.99 (27%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46, 47]  
+M [Buty miejskie Hoops dla dzieci ADIDAS](http://www.decathlon.pl/buty-adidas-hoops-id_8352479.html) 169.99->129.99 (24%) [Nowa] [Rozmiary: 32, 33, 34, 35]  
+M [Buty do aktywnego marszu Cloudfoam Speed damskie ADIDAS](http://www.decathlon.pl/buty-cloudfoam-speed-id_8352879.html) 219.99->169.99 (23%) [Nowa] [Rozmiary: 36, 37, 38, 39, 40, 41, 42]  
+M [Buty do aktywnego marszu V Racer TM męskie ADIDAS](http://www.decathlon.pl/buty-v-racer-tm-id_8350886.html) 279.99->219.99 (21%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46, 47]  
+M [Buty miejskie i sportowe Actiwalk 940 dla dzieci NEWFEEL](http://www.decathlon.pl/buty-actiwalk-940-id_8339816.html) 99.99->79.99 (20%) [Nowa] [Rozmiary: 28, 29, 30, 31, 38, 39]  
+M [Buty do aktywnego marszu Zquick Lite męskie REEBOK](http://www.decathlon.pl/buty-zquick-lite-id_8350885.html) 249.99->199.99 (20%) [Nowa] [Rozmiary: 41, 42, 43, 44, 45, 46]  
+M [Buty do aktywnego marszu Cloudfoam Speed męskie ADIDAS](http://www.decathlon.pl/buty-cloudfoam-speed-id_8350884.html) 219.99->179.99 (18%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46, 47]  
+M [Buty do aktywnego marszu Techik męskie KAPPA](http://www.decathlon.pl/buty-techik-id_8350883.html) 179.99->159.99 (11%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46, 47]  
+M [Buty do aktywnego marszu MD Runner męskie NIKE](http://www.decathlon.pl/buty-md-runner-id_8350882.html) 219.99->199.99 (9%) [Nowa] [Rozmiary: 39, 40, 41, 42, 43, 44, 45, 46, 47]  
+M [Buty miejskie Flow Resist Winter męskie NEWFEEL](http://www.decathlon.pl/buty-flow-resist-winter-id_8340189.html) 249.99->179.99 (28%) [Niższa cena z 199.99] [Rozmiary: 43]  
+M [Buty miejskie Frost damskie NEWFEEL](http://www.decathlon.pl/buty-frost-id_8341120.html) 119.99->49.99 (58%) [Powrót] [Rozmiary: 37, 42]  
 
-Kategoria: Akcesoria wędkarskie->Ciężarki wędkarskie, koszyczki zanętowe, sprężyny  
-U [Ciężarki Catherine Bombee x 5 Catherine](http://www.decathlon.pl/ciarki-catherine-bombee-x-5-id_1584971.html) 14.99->10.0 (33%) [Nowa] [Rozmiary: 6 G, 8 G, 10 G, 15 G, 20 G, 30 G, 40 G]  
-U [Obciążenie wędkarskie Wkład ciężarków super miękkich CAPERLAN](http://www.decathlon.pl/wkad-ciarkow-super-mikkich-id_4451971.html) 6.99->5.99 (14%) [Powrót] [Rozmiary: 1, 3, 5]  
+Kategoria: Chodzenie->Akcesoria do butów  
+M [Stopki NEWFEEL](http://www.decathlon.pl/skarpetki-stopki-id_8333493.html) 14.99->9.99 (33%) [Wyższa cena z 6.0] [Rozmiary: 35/38]  
 
-Kategoria: Sporty Precyzyjne->Bule  
-U [3 bule do gry w petanque OBUT Match IT OBUT](http://www.decathlon.pl/3-bule-obut-match-it-id_4589000.html) 519.0->336.0 (35%) [Powrót] [Rozmiary: 73 MM 690S, 73 MM 700L, 74 MM 710S, 75 MM 700L]  
-
-Kategoria: Surf, Wakeboard, Bodyboard->Kostiumy, odzież, obuwie  
-M [Spodenki surfing Waves męskie Quiksilver](http://www.decathlon.pl/boardshort-waves-id_8360483.html) 199.99->149.99 (25%) [Nowa] [Rozmiary: S, M, L, XL, 2XL]  
-M [Spodenki surfing Waves męskie Quiksilver](http://www.decathlon.pl/boardshort-waves-id_8360484.html) 199.99->149.99 (25%) [Nowa] [Rozmiary: S, M, L, XL, 2XL]  
-M [Spodenki surfing Waves męskie Quiksilver](http://www.decathlon.pl/boardshort-waves-id_8360485.html) 199.99->149.99 (25%) [Nowa] [Rozmiary: S, M, L, XL, 2XL]  
-F [Kostium jednoczęściowy DOLI KENY damski TRIBORD](http://www.decathlon.pl/kostium-1cz-doli-keny-id_8331600.html) 139.99->119.99 (14%) [Wyższa cena z 99.99] [Rozmiary: 40, 42, 44, 46, 48, 50]  
-F [Kostium jednoczęściowy CORI REDJA damski TRIBORD](http://www.decathlon.pl/kostium-1cz-cori-redja-id_8336224.html) 79.99->59.99 (25%) [Powrót] [Rozmiary: 40]  
-M [Szorty kąpielowe Volley Plain męskie Quiksilver](http://www.decathlon.pl/szorty-plain-quiksilver-m-czer-id_8333897.html) **199.99->80.0 (60%) [Powrót z wyższą ceną z 39.99]** [Rozmiary: 2XL]  
+Kategoria: Surf, Wakeboard, Bodyboard->Ochrona przeciwsłoneczna  
+J [TOP UV 100 JR Heart różowy TRIBORD](http://www.decathlon.pl/koszulka-krotki-rkaw-dla-dzieci-uv-100-id_8301469.html) 39.99->29.99 (25%) [Nowa] [Rozmiary: 10 LAT]  
+M [TOP anty-UV surf bodyboard 900 Pro niebiesko/biały TRIBORD](http://www.decathlon.pl/koszulka-dugi-rkaw-mska-uv-900-id_8301462.html) 149.99->62.0 (59%) [Wyższa cena z 61.0] [Rozmiary: S]  
 
 Kategoria: Surf, Wakeboard, Bodyboard->Sporty wodne, Sporty holowane  
-U [Wakeboard Whirly Bird 132x42 NOBILE](http://www.decathlon.pl/wakeboard-whirly-bird-134x42-id_8349534.html) 1799.0->1359.99 (24%) [Powrót]  
-U [Wakeboard Whirly Bird 138x43 NOBILE](http://www.decathlon.pl/wakeboard-whirly-bird-138x43-id_8349537.html) 1799.0->1359.99 (24%) [Powrót]  
-U [Wakeboard Whirly Bird 141x44 NOBILE](http://www.decathlon.pl/wakeboard-whirly-bird-141x44-id_8349558.html) 1799.0->1359.99 (24%) [Powrót]  
-U [Wakeboard Rubicon 141x44 NOBILE](http://www.decathlon.pl/wakeboard-rubicon-141x44-id_8349559.html) 1999.0->1599.99 (20%) [Powrót z wyższą ceną z 1599.0]  
+U [Kamiz.Alpha Impact H (ISO)**** JOBE](http://www.decathlon.pl/kamizalpha-impact-h-iso-id_8248386.html) 439.99->259.99 (41%) [Nowa] [Rozmiary: XS]  
 
 Kategoria: Inne sporty->Żeglarstwo, kajakarstwo  
-F [Ciepła kurtka żeglarska Raincoastal damska TRIBORD](http://www.decathlon.pl/raincoastal-ciepa-d-cnieb-id_8344152.html) 149.99->89.99 (40%) [Niższa cena z 99.99] [Rozmiary: XS, S, M]  
-M [Ciepła bluza żeglarska Krosko męska TRIBORD](http://www.decathlon.pl/ciepa-bluza-krosko-id_8344136.html) 149.99->112.0 (25%) [Niższa cena z 119.99] [Rozmiary: S, M, 3XL]  
+F [Ciepła kurtka żeglarska Raincoastal damska TRIBORD](http://www.decathlon.pl/raincoastal-ciepa-d-cnieb-id_8344152.html) 149.99->119.99 (20%) [Wyższa cena z 89.99] [Rozmiary: XS, S, M]  
+
+Kategoria: Nurkowanie->Akcesoria do nurkowania  
+U [Duży statyw teleskopowy do kamery U-SHOT XSories](http://www.decathlon.pl/statyw-xsories-big-ushot-process-blue-id_8314587.html) 219.99->129.99 (41%) [Powrót]  
 
 Kategoria: Pływanie, Triathlon->Stroje pływackie  
-J [Kąpielówki chłopięce BASICYOKE czerwono-białe NABAIJI](http://www.decathlon.pl/slipki-basicyoke-czerw-biae-id_8307162.html) 29.99->22.0 (27%) [Niższa cena z 23.0] [Rozmiary: 12 lat, 14 lat]  
-F [Kostium jednoczęściowy pływacki Shani slim damski NABAIJI](http://www.decathlon.pl/1cz-shani-slim-all-cara-nieb-id_8335138.html) 99.99->89.0 (11%) [Niższa cena z 89.99] [Rozmiary: 50]  
+U [Top Kloupi Girl Fioletowo/Różowy Nabaiji](http://www.decathlon.pl/top-kloupi-girl-fioletowo-roowy-id_8197106.html) 39.99->34.99 (13%) [Powrót] [Rozmiary: 3 JAAR]  
 
-Kategoria: Pływanie, Triathlon->Nauka pływania, baseny  
-U [Pull buoy pływacki NABAIJI](http://www.decathlon.pl/pull-buoy-roowy-id_8117143.html) 24.99->18.0 (28%) [Powrót z niższą ceną z 19.0]  
+Kategoria: Nurkowanie->Akcesoria do nurkowania  
+U [Duży statyw teleskopowy do kamery U-SHOT XSories](http://www.decathlon.pl/statyw-xsories-big-ushot-process-blue-id_8314587.html) 219.99->129.99 (41%) [Powrót]  
 
-Kategoria: Wspinaczka, alpinizm->Wspinaczka  
-U [Buty wspinaczkowe Velocity SCARPA](http://www.decathlon.pl/buty-wspinaczkowe-velocity-id_8331128.html) 349.99->299.99 (14%) [Wyższa cena z 249.99] [Rozmiary: 38, 39, 40, 41, 42, 43, 44, 45]  
+Kategoria: Wspinaczka, alpinizm->Alpinizm  
+U [Kominiarka wspinaczkowa Alpinism z polaru SIMOND](http://www.decathlon.pl/kominiarka-alpinizm-z-polaru--id_5974222.html) **99.99->39.99 (60%) [Nowa]** [Rozmiary: 1]  
 
-Kategoria: Sporty Zimowe->Odzież, Obuwie - Narty, Snowboard  
-F [Kurtka narciarska KP damska DELTA-SPORT HANDELSK](http://www.decathlon.pl/kurtka-narciarska-kp-id_8349256.html) 189.99->108.0 (43%) [Powrót z wyższą ceną z 99.99] [Rozmiary: XS, S, M]  
-J [Kurtka narciarska KP](http://www.decathlon.pl/kurtka-narciarska-kp-id_8349275.html) 149.99->92.0 (39%) [Powrót z wyższą ceną z 91.0] [Rozmiary: 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
-J [Kurtka narciarska KP](http://www.decathlon.pl/kurtka-narciarska-kp-id_8349277.html) 149.99->96.0 (36%) [Powrót z wyższą ceną z 95.0] [Rozmiary: 6 LAT, 8 LAT, 10 LAT, 12 LAT, 14 LAT]  
+Kategoria: Sporty Zimowe->Akcesoria narciarskie i snowboardowe  
+J [Osłona Kasku Narciarskiego Bear Wedze Dla Dzieci Wed'Ze](http://www.decathlon.pl/osona-kasku-narciarskiego-dla-dzieci-bear-id_8317236.html) **24.99->8.49 (66%) [Powrót]**  
 
-Kategoria: Sporty Zimowe->Sprzęt narciarski  
-F [Buty narciarskie NXT N3 85 damskie NORDICA](http://www.decathlon.pl/buty-narciarskie-nxt-85-id_8345844.html) 899.99->610.0 (32%) [Niższa cena z 799.99] [Rozmiary: 23,5, 24, 24,5, 25,5]  
-U [Narty PURSUIT 100 + XELIUM 100 ROSSIGNOL](http://www.decathlon.pl/narty-pursuit-100-xelium-100-id_8358129.html) 999.99->599.99 (40%) [Powrót] [Rozmiary: 156 CM, 170 CM]  
-M [Buty narciarskie XC 100 LANGE-DYNASTAR](http://www.decathlon.pl/buty-narciarskie-xc-100-id_8333124.html) 999.99->799.99 (20%) [Powrót] [Rozmiary: 26,5, 27, 27,5, 28, 28,5, 29,5]  
-M [Buty narciarskie Ten.2 90 męskie TECNICA](http://www.decathlon.pl/buty-narciarskie-ten-2-90-id_8345484.html) 999.99->658.0 (34%) [Powrót z wyższą ceną z 649.99] [Rozmiary: 26, 27, 27,5, 28, 29]  
-U [Narty Head strong instinct HEAD](http://www.decathlon.pl/narty-strong-instinct-id_8346134.html) 1599.0->1146.0 (28%) [Powrót z wyższą ceną z 899.99] [Rozmiary: 163 CM, 170 CM]  
-F [Buty narciarskie MID 75-85 damskie WED'ZE](http://www.decathlon.pl/buty-narciarskie-mid75-85-id_8342973.html) 699.99->516.0 (26%) [Powrót z wyższą ceną z 399.99] [Rozmiary: 23,5, 24, 24,5, 25,5]  
-U [VÖLKL Racetiger SRC Red VÖLKL](http://www.decathlon.pl/narty-volkl-racetiger-src-red-id_8359575.html) 1999.0->1506.0 (25%) [Powrót z wyższą ceną z 1299.99] [Rozmiary: 153 CM, 158 CM, 163 CM, 168 CM, 173 CM]  
-J [Hero Kid + Kid-X 45 Rossignol](http://www.decathlon.pl/hero-kid-kid-x-45-id_8358141.html) 599.99->471.0 (21%) [Powrót z wyższą ceną z 399.99] [Rozmiary: 110 CM, 120 CM, 130 CM]  
-U [Narty zjazdowe X-Drive 83 SALOMON](http://www.decathlon.pl/narty-x-drive-83-id_8345231.html) 1999.0->1581.0 (21%) [Powrót z wyższą ceną z 1299.99] [Rozmiary: 176 CM, 183 CM]  
-U [Narty zjazdowe Hero Elis ST ROSSIGNOL](http://www.decathlon.pl/narty-hero-elite-st-id_8345500.html) 1999.0->1676.0 (16%) [Powrót z wyższą ceną z 1399.99] [Rozmiary: 161 CM, 166 CM]  
-U [Narty zjazdowe XLANDER 85 Ti WED'ZE](http://www.decathlon.pl/narty-xlander-85-ti-id_8343471.html) 1199.0->1018.0 (15%) [Powrót z wyższą ceną z 799.99] [Rozmiary: 170 CM, 177 CM]  
-J [Narty dla dzieci Minionki ROSSIGNOL](http://www.decathlon.pl/narty-rossignol-minionki-id_8345498.html) 599.99->544.0 (9%) [Powrót z wyższą ceną z 399.99] [Rozmiary: 104 CM, 116 CM]  
+Kategoria: Elektronika->Audio, Video  
+U [Uniwersalny leash TOAD S](http://www.decathlon.pl/uniwersalny-leash-id_8326076.html) 29.99->29.0 (3%) [Wyższa cena z 28.0]  
 
-Kategoria: Torby, Plecaki->Torby  
-U [Narty Starliner miny wed'ze Rental WED'ZE](http://www.decathlon.pl/narty-starliner-miny-rental-id_8319407.html) 429.99->307.0 (29%) [Powrót z wyższą ceną z 300.0] [Rozmiary: 120 CM]  
+Kategoria: Obuwie->Sport  
+M [Buty turystyczne Arpenaz 100 Warm wysokie męskie QUECHUA](http://www.decathlon.pl/buty-zimowe-turystyczne-arpenaz-100-mskie-id_8285136.html) 99.99->51.0 (49%) [Wyższa cena z 49.99] [Rozmiary: 40]  
+
+Kategoria: Dziewczynka->Kostiumy kąpielowe  
+J [Kostium dwuczęściowy DOLI dla dzieci TRIBORD](http://www.decathlon.pl/kostium-dwuczciowy-doli-dla-dzieci-tribord-id_8329966.html) 49.99->39.99 (20%) [Powrót] [Rozmiary: 12 LAT]  
+
+Kategoria: Obuwie->Obuwie maluch  
+J [Buty turystyczne Arpenaz 300 dla maluchów QUECHUA](http://www.decathlon.pl/buty-arpenaz-300-dla-maluchow-id_8344354.html) 74.99->49.99 (33%) [Nowa] [Rozmiary: 21, 22, 23, 24, 25, 26, 27]  
+J [Sandały turystyczne skórzane Arpenaz 200 dla maluchów QUECHUA](http://www.decathlon.pl/buty-arpenaz-200-dla-maluchow-id_8330799.html) 99.99->69.99 (30%) [Nowa] [Rozmiary: 25, 26, 27]  
 
 
-Lista przecenionych produktów (delta 07.05.2016-13.05.2016):
+Lista przecenionych produktów (delta 13.05.2016-22.05.2016):
 
-[Buty do biegania NOVA BOUNCE damskie ADIDAS](http://www.decathlon.pl/buty-adidas-nova-bounce-id_8353370.html) 299.99->169.99 (43%)  
-[Narty Zjazdowe Nomad Smoke Atomic Atomic](http://www.decathlon.pl/narty-nomad-smoke-id_8345810.html) 1299.0->885.0 (31%) [Regularna cena była niższa 871.0 w dn. 2016-04-22]  
-[Zestaw akcesoriów do połowów z nęceniem CAPERLAN](http://www.decathlon.pl/zestaw-acc-poowy-z-nceniem-id_8207424.html) 34.99->24.99 (28%)  
-[Zestaw na pstrągi Pole Fishing  ACC trout CAPERLAN](http://www.decathlon.pl/zestaw-acc-pstrgi-id_8207425.html) 34.99->24.99 (28%)  
-[Piłka do piłki nożnej Origami rozmiar 5 KIPSTA](http://www.decathlon.pl/pika-origami-rozm-5-id_8340813.html) 34.99->24.99 (28%)  
-[Baton zbożowy słodki CLAK PROMO APTONIA](http://www.decathlon.pl/batonik-zbo-clak-promo-czeko-id_8356223.html) 6.99->4.99 (28%)  
-[Koszulka fitness krótki rękaw DECADI męska ADIDAS](http://www.decathlon.pl/koszulka-do-fitnessu-decadi-id_8352693.html) 64.99->49.99 (23%) [Regularna cena była niższa 39.99 w dn. 2016-05-01]  
-[Koszulka fitness krótki rękaw DECADI męska ADIDAS](http://www.decathlon.pl/koszulka-do-fitnessu-decadi-id_8352694.html) 64.99->49.99 (23%) [Regularna cena była niższa 39.99 w dn. 2016-05-01]  
-[Koszulka fitness krótki rękaw DECADI męska ADIDAS](http://www.decathlon.pl/koszulka-do-fitnessu-decadi-id_8352695.html) 64.99->49.99 (23%) [Regularna cena była niższa 39.99 w dn. 2016-05-01]  
-[Koszulka fitness krótki rękaw DECADI męska ADIDAS](http://www.decathlon.pl/koszulka-do-fitnessu-decadi-id_8352696.html) 64.99->49.99 (23%) [Regularna cena była niższa 39.99 w dn. 2016-05-01]  
-[Narty zjazdowe X-Drive 80 SALOMON](http://www.decathlon.pl/narty-salomon-x-drive-80-id_8345221.html) 1499.0->1180.0 (21%) [Regularna cena była niższa 1174.0 w dn. 2016-03-25]  
-[Deskorolka Cruiser BIG YAMBA zielono-żółta OXELO](http://www.decathlon.pl/big-yamba-green-yellow-id_8319132.html) 249.99->199.99 (20%)  
-[Deskorolka Cruiser BIG YAMBA czerwono-niebieska OXELO](http://www.decathlon.pl/big-yamba-red-blue-id_8319134.html) 249.99->199.99 (20%)  
-[Deskorolka Cruiser BIG YAMBA MAKI koralowa OXELO](http://www.decathlon.pl/big-yamba-maki-koralowa-id_8319135.html) 249.99->199.99 (20%)  
-[Deskorolka Cruiser BIG YAMBA niebiesko-koralowa OXELO](http://www.decathlon.pl/deska-big-yamba-blue-corail-id_8319136.html) 249.99->199.99 (20%)  
-[Deskorolka BIG YAMBA OXELO](http://www.decathlon.pl/deskorolka-big-yamba-id_8352613.html) 249.99->199.99 (20%)  
-[Koszulka fitness krótki rękaw JUST DO IT męska NIKE](http://www.decathlon.pl/koszulka-mska-nike-id_8354055.html) 84.99->69.99 (17%)  
-[Koszulka fitness krótki rękaw JUST DO IT męska NIKE](http://www.decathlon.pl/koszulka-mska-nike-id_8354057.html) 84.99->69.99 (17%)  
-[Buty Tenis Vlcourt Damskie Adidas](http://www.decathlon.pl/buty-vlcourt-id_8351295.html) 229.99->199.99 (13%)  
-[Kieszonka A5 szczelna na tablet SURFSYSTEM](http://www.decathlon.pl/kieszonka-a5-na-tablet-id_8362005.html) 149.99->129.99 (13%)  
-[Podest modułowy z koszem CSB Competition CAPERLAN](http://www.decathlon.pl/csb-competition-id_8304534.html) 1539.0->1339.0 (12%)  
-[Zestaw spławikowy Float  350 Essentiel CAPERLAN](http://www.decathlon.pl/wdka-do-wdkarstwa-morskiego-float-350-essentiel-id_8235747.html) 79.99->69.99 (12%)  
-[Piłka do skakania Resist 45 cm DOMYOS](http://www.decathlon.pl/pika-do-skakania-resist-45-cm-id_8363516.html) 39.99->34.99 (12%)  
-[Piłka fitness Resist 45 cm DOMYOS](http://www.decathlon.pl/pika-do-skakania-resist-45-cm-id_8363517.html) 39.99->34.99 (12%)  
-[Pianka surfingowa 500 2 mm krótki rękaw męska TRIBORD](http://www.decathlon.pl/pianka-surf-500-2-mm-id_8357369.html) 399.99->359.99 (10%)  
+[Śrubokręt wielofunkcyjny MVB](http://www.decathlon.pl/rubokrt-wielofunkcyjny-id_8358546.html) 44.99->29.99 (33%)  
+[Zegarek GPS M400 z pasem cardio POLAR](http://www.decathlon.pl/zegarek-gps-m400-hrm-id_8360693.html) 869.99->599.99 (31%) [Regularna cena była niższa 599.0 w dn. 2015-12-11]  
+[Zestaw bidon + ręcznik fitness PUMA](http://www.decathlon.pl/bidon-rcznik-fitness-id_8355959.html) 84.99->59.99 (29%)  
+[Zestaw bidon + ręcznik fitness PUMA](http://www.decathlon.pl/bidon-rcznik-fitness-id_8355960.html) 84.99->59.99 (29%)  
+[Odblaskowe paski samoprzylepne PLASTIMO](http://www.decathlon.pl/odblaskowe-paski-samoprzylepne-id_8362708.html) 129.99->99.99 (23%)  
+[Miękka przynęta Blue Shad 12 cm Ice Shad x 5 FLASHMER](http://www.decathlon.pl/blue-shad-12-cm-ice-shad-x-5-id_8327482.html) 44.99->34.99 (22%)  
+[Przynęta miękka Blue Shad 12 cm x 5 FLASHMER](http://www.decathlon.pl/blue-shad-12-cm-x-5-id_8327483.html) 44.99->34.99 (22%)  
+[Lemondki do kierownicy triathlonowej carbonowe PZ RACING MVB](http://www.decathlon.pl/lemondki-do-triathlonu-carbon-id_8368774.html) 569.99->449.99 (21%)  
+[Kompas żeglarski IRIS 100 PLASTIMO](http://www.decathlon.pl/kompas-eglarski-iris-100-id_8362586.html) 409.99->319.99 (21%)  
+[Uprząż żeglarska regulowana bez linki PLASTIMO](http://www.decathlon.pl/uprz-regulowana-bez-linki-id_8362707.html) 189.99->149.99 (21%)  
+[Lina asekuracyjna 6 m X 2 PLASTIMO](http://www.decathlon.pl/lina-asekuracyjna-6-m-x-2-id_8362715.html) 199.99->159.99 (20%)  
+[Rybaczki do jogi Yoga+ damskie DOMYOS](http://www.decathlon.pl/rybaczki-yoga-id_8326128.html) 74.99->59.99 (20%)  
+[Rybaczki do jogi Yoga+ damskie DOMYOS](http://www.decathlon.pl/rybaczki-yoga-id_8352402.html) 74.99->59.99 (20%)  
+[Skarpety do piłki nożnej F 500 KIPSTA](http://www.decathlon.pl/skarpety-f-500-id_8350116.html) 24.99->19.99 (20%) [Regularna cena była niższa 19.9 w dn. 2016-01-24]  
+[Lusterko Sygnalizacyjne Plastimo](http://www.decathlon.pl/lusterko-sygnalizacyjne-id_8362644.html) 24.99->19.99 (20%)  
+[Pokrowiec wędkarski morski Surf C XPAND CAPERLAN](http://www.decathlon.pl/pokrowiec-na-wdk-surf-c-xpand-id_8168968.html) 219.99->179.99 (18%)  
+[Zestaw Multisportpro SPORT ELEC](http://www.decathlon.pl/zestaw-multisportpro-id_8365133.html) 789.99->649.99 (17%)  
+[Zestaw Resifight 5 330 Slim CAPERLAN](http://www.decathlon.pl/zestaw-resifight-5-330-slim-id_8349869.html) 279.99->229.99 (17%)  
+[Wędka spinningowa Illicium 210 MH 10 - 30 g N CAPERLAN](http://www.decathlon.pl/ilicium-210-mh-10-30-g-n-id_8323199.html) 319.99->269.99 (15%)  
+[Spodnie turystyczne Arpenaz 100 damskie 2 w 1 QUECHUA](http://www.decathlon.pl/spodnie-2-w-1-arpenaz-100-id_8355035.html) 129.99->109.99 (15%)  
+[Spodnie turystyczne 2 w 1 Arpenaz 100 damskie QUECHUA](http://www.decathlon.pl/spodnie-turystyczne-2w1-arpenaz-100-damskie-id_8355060.html) 129.99->109.99 (15%)  
+[Zestaw spinningowy Lure Essential CAPERLAN](http://www.decathlon.pl/zestaw-essential-lure-id_8185394.html) 64.99->54.99 (15%)  
+[Latarka Dynamo 100 GEONAUTE](http://www.decathlon.pl/latarka-dynamo-100-id_8361275.html) 34.99->29.99 (14%)  
+[Latarka Dynamo 100 GEONAUTE](http://www.decathlon.pl/latarka-dynamo-100-id_8361289.html) 34.99->29.99 (14%)  
+[Zestaw spinningowy Lure Light 180 2-10 g CAPERLAN](http://www.decathlon.pl/zestaw-lure-light-180-id_8323042.html) 159.99->139.99 (12%)  
+[Wędka Resifight-5 330 SLIM CAPERLAN](http://www.decathlon.pl/wdka-resifight-5-330-slim-id_8349253.html) 159.99->139.99 (12%)  
+[Pompa zęzowa ręczna PLASTIMO](http://www.decathlon.pl/pompa-zzowa-rczna-id_5624191.html) 79.99->69.99 (12%)  
+[Wędka Resifight-5 450 CAPERLAN](http://www.decathlon.pl/wdka-resifight-5-450-id_8349250.html) 179.99->159.99 (11%)  
+[Lina asekuracyjna prosta z 2 karabińczykami PLASTIMO](http://www.decathlon.pl/lina-asekuracyjna-2-karabicz-id_8362058.html) 179.99->159.99 (11%)  
+[Zestaw spinningowy Axion 210 MH 10-30 g CAPERLAN](http://www.decathlon.pl/zestaw-axion-210-mh-10-30-g-id_8323192.html) 299.99->269.99 (10%)  
+[Zestaw spinningowy Lure 270 20-40 g CAPERLAN](http://www.decathlon.pl/zestaw-lure-270-20-40-g-id_8293065.html) 199.99->179.99 (10%)  
 
 Więcej informacji: https://github.com/thof/decapromolist#decapromolist  
 PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)  
