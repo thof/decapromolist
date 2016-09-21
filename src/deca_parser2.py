@@ -78,7 +78,7 @@ class DecaParser2:
             try:
                 item = {}
                 item['id'] = int(sel.xpath('@data-product-id')[0])
-            except IndexError:
+            except IndexError or ValueError:
                 print "Skipped wrong category"
                 continue
             try:

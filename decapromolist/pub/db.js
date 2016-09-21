@@ -7,6 +7,8 @@
     var db = {
         loadData: function(filter) {
             setFilterValues(filter);
+            prepareCategoryFilter(filter.sc);
+            prepareStringFilter(filter.sx, filter.nm, filter.sz, filter.or); 
             var items = [];
             $.ajax({
               dataType: "json",
@@ -18,11 +20,11 @@
             });
             return $.grep(items, function(product) {
                 try{
-                    return (!filter.sx || checkString(product.sx, filter.sx))
-                        && (!filter.sc || checkString(product.sc, filter.sc))
-                        && (!filter.nm || checkString(product.nm, filter.nm))
-                        && (!filter.sz || checkString(product.sz, filter.sz))
-                        && (!filter.or || checkString(product.or, filter.or))
+                    return (!filter.sx || checkString(product.sx, reSx))
+                        && (!filter.sc || checkCategory(product.sc))
+                        && (!filter.nm || checkString(product.nm, reNm))
+                        && (!filter.sz || checkString(product.sz, reSz))
+                        && (!filter.or || checkString(product.or, reOr))
                         && (!filter.pr || checkNumber(product.pr, filter.pr))
                         && (!filter.op || checkNumber(product.pp, filter.op))
                         && (!filter.dc || checkNumber(product.dc, filter.dc));
@@ -45,16 +47,43 @@
 
 }());
 
-function checkString(string, searchValue) {
-    var result = false;
-    var strArray = searchValue.split("|");
+var reNeg, rePos, reSx, reNm, reSz, reOr;
+
+function prepareStringFilter(filterSx, filterNm, filterSz, filterOr){
+    reSx = new RegExp(filterSx, "i");
+    reNm = new RegExp(filterNm, "i");
+    reSz = new RegExp(filterSz, "i");
+    reOr = new RegExp(filterOr, "i");
+}
+
+function prepareCategoryFilter(filter){
+    var negative = "";
+    var positive = "";
+    var strArray = filter.split("|");
     $.each(strArray, function(index, value) {
-        if(result) {
-            return result; 
-        } 
-        result = string.toLowerCase().indexOf(value.toLowerCase()) > -1;
+        if(value.substring(0,1).localeCompare("!") == 0){
+            negative = negative + value.substring(1) + "|";
+        }
+        else {
+            positive = positive + value + "|";
+        }
     });
-    return result;
+    negative = negative.substring(0, negative.length - 1);
+    positive = positive.substring(0, positive.length - 1);
+    if(negative.localeCompare("") != 0){
+        reNeg = new RegExp(negative, "i");
+    } else {
+        reNeg = null;
+    }
+    if(positive.localeCompare("") != 0){
+        rePos = new RegExp(positive, "i");
+    } else {
+        rePos = null;
+    }
+}
+
+function checkString(string, re){
+    return re.test(string);
 }
 
 function checkNumber(number, cmpNumber){
@@ -74,6 +103,18 @@ function checkNumber(number, cmpNumber){
     }
 }
 
+function checkCategory(string){
+    if(reNeg != null){
+        if(reNeg.test(string)){
+            return false;
+        }
+    }
+    if(rePos != null){
+        return rePos.test(string);
+    }
+    return true;
+}
+
 function getParameterByName(name, url){
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -90,14 +131,26 @@ function checkName(file) {
 }
 
 function setFilterValues(filter) {
-    !filter.sx || localStorage.setItem("filter0", filter.sx);
-    !filter.sc || localStorage.setItem("filter1", filter.sc);
-    !filter.nm || localStorage.setItem("filter2", filter.nm);
-    !filter.sz || localStorage.setItem("filter3", filter.sz);
-    !filter.op || localStorage.setItem("filter4", filter.op);
-    !filter.pr || localStorage.setItem("filter5", filter.pr);
-    !filter.dc || localStorage.setItem("filter6", filter.dc);
-    !filter.or || localStorage.setItem("filter7", filter.or);
+    if(!filterIsEmpty(filter)){
+        localStorage.setItem("filter0", filter.sx);
+        localStorage.setItem("filter1", filter.sc);
+        localStorage.setItem("filter2", filter.nm);
+        localStorage.setItem("filter3", filter.sz);
+        localStorage.setItem("filter4", filter.op);
+        localStorage.setItem("filter5", filter.pr);
+        localStorage.setItem("filter6", filter.dc);
+        localStorage.setItem("filter7", filter.or);
+    }
+}
+
+function filterIsEmpty(filter){
+    var array = Object.values(filter);
+    for (var i = 0; i < array.length; i++) {
+        if(array[i] != ""){
+            return false;
+        }
+    }
+    return true;
 }
 
 function insertFilterValues() {
