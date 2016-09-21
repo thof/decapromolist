@@ -144,7 +144,7 @@ function setFilterValues(filter) {
 }
 
 function filterIsEmpty(filter){
-    var array = Object.values(filter);
+    var array = $.map(filter, function(val, key) { return val; });
     for (var i = 0; i < array.length; i++) {
         if(array[i] != ""){
             return false;
