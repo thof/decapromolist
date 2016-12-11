@@ -128,12 +128,16 @@ class PrepareResults:
                         nameCheck = nameCheck.lower()
 
                     # get the product name
-                    name = response.xpath('//span[@id="productName"]')[0].text
-                    if name == name.upper():
-                        name = name.title().encode('utf-8')
-                    else:
-                        name = name.encode('utf-8')
-                    print(name+" "+url.encode('utf-8'))
+                    try:
+                        name = response.xpath('//span[@id="productName"]')[0].text
+                        if name == name.upper():
+                            name = name.title().encode('utf-8')
+                        else:
+                            name = name.encode('utf-8')
+                        print(name+" "+url.encode('utf-8'))
+                    except IndexError:
+                        print("\Invalid product: "+row)
+                        continue
 
                     # when a product is out of stock then skip to the next one
                     outOfStock = response.xpath('//link[@href="http://schema.org/OutOfStock"]')
@@ -271,11 +275,16 @@ class PrepareResults:
                 content = urllib2.urlopen(url).read()
                 response = html.fromstring(content)
 
-                name = response.xpath('//span[@id="productName"]')[0].text
-                if name == name.upper():
-                    name = name.title().encode('utf-8')
-                else:
-                    name = name.encode('utf-8')
+                try:
+                    name = response.xpath('//span[@id="productName"]')[0].text
+                    if name == name.upper():
+                        name = name.title().encode('utf-8')
+                    else:
+                        name = name.encode('utf-8')
+                    print(name + " " + url.encode('utf-8'))
+                except IndexError:
+                    print("\Invalid product: " + row)
+                    continue
 
                 text = "[{}](http://www.decathlon.pl{}) {}->{} ({}%)".format(name, prod['url'], prod['prev_price'],
                                                                              prod['price'], prod['discount'])

@@ -60,12 +60,12 @@ class DecaParser2:
                     if page == 1:
                         urlCat = "{}/pl/getSubNavigationMenu?primaryCategoryId={}".format(
                             Utils.getConfig()['siteURL'], cat['subId'])
-                        print "!!!!!! We need to go deeper {}".format(url)
+                        print "*** Let's try to seek deeper {}".format(url)
                         dataCat = GetSubcategories.getThirdLevelCat([urlCat])
                         subcat[index+1:index+1] = dataCat
                         self.getProductsByCat(dataCat)
                     break
-            print "*** {} {}\n".format(cat['url'].encode('utf-8'), self.counter)
+            print "{} {}".format(cat['url'].encode('utf-8'), self.counter)
 
     def parse(self, subId, url):
         productCnt = 0
@@ -73,8 +73,8 @@ class DecaParser2:
         if not content:
             raise IndexError
         response = html.fromstring(content)
-        response.xpath('//li[@class="product product_normal"]')[0]
-        for sel in response.xpath('//li[@class="product product_normal"]'):
+        response.xpath('//li[@class="new-product-thumbnail desktop "]')[0]
+        for sel in response.xpath('//li[@class="new-product-thumbnail desktop "]'):
             try:
                 item = {}
                 item['id'] = int(sel.xpath('@data-product-id')[0])
@@ -83,16 +83,19 @@ class DecaParser2:
                 continue
             try:
                 item['price'] = float(sel.xpath('@data-product-price')[0])
-                item['url'] = sel.xpath('div//a[@class="product_name"]/@href')[0]
+                item['url'] = sel.xpath('a[@class="thumbnail-link"]/@href')[0]
                 #item['avail'] = sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0],
                 item['cat'] = subId
                 # item['name'] = sel.xpath('@data-product-name')[0]
                 # item['descr'] = sel.xpath('div//img/@alt').extract()[0]
                 try:
-                    item['oldPr'] = sel.xpath('div//span[@class="old_price"]/text()')[0]
+                    item['oldPr'] = sel.xpath('.//span[@class="old-price crossed"]/text()')[0].strip()
+                    if not item['oldPr']:
+                        item.pop('oldPr', None)
+                        raise IndexError
                     item['oldPr'] = re.match('([0-9,]+)', item['oldPr'].encode('ascii', 'ignore')).group(1)
                     item['oldPr'] = float(''.join(item['oldPr'].split()).replace(",", "."))
-                    item['disc'] = int(re.findall(r'\d+', sel.xpath('div//span[@class="oldPrice-percentage"]/text()')[0])[0])
+                    item['disc'] = int(re.findall(r'\d+', sel.xpath('.//span[@class="old-price-percentage"]/text()')[0])[0])
                 except IndexError:
                     # print "Item without discount: "+item['id']+" "+item['name']
                     pass
