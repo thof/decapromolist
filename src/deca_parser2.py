@@ -45,7 +45,10 @@ class DecaParser2:
             page = 0
             while True:
                 page += 1
-                url = "http://www.decathlon.pl/pl/getAjaxListProductNextPage?uriPage=/C-{}/I-Page{}_40".format(cat['subId'], page)
+                if page == 1:
+                    url = "http://www.decathlon.pl/C-{}".format(cat['subId'])
+                else:
+                    url = "http://www.decathlon.pl/pl/getAjaxListProductNextPage?uriPage=/C-{}/I-Page{}_40".format(cat['subId'], page)
                 #print url
                 try:
                     self.parse(cat['subId'], url)
@@ -73,8 +76,8 @@ class DecaParser2:
         if not content:
             raise IndexError
         response = html.fromstring(content)
-        response.xpath('//li[@class="new-product-thumbnail desktop "]')[0]
-        for sel in response.xpath('//li[@class="new-product-thumbnail desktop "]'):
+        response.xpath('//li[@class="new-product-thumbnail desktop"]')[0]
+        for sel in response.xpath('//li[contains(@class, "new-product-thumbnail desktop")]'):
             try:
                 item = {}
                 item['id'] = int(sel.xpath('@data-product-id')[0])
