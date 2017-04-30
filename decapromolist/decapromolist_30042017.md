@@ -182,9 +182,3 @@ Lista przecenionych produktów (delta 22.04.2017-30.04.2017):
 [Torba do sportów zespołowych Regular 85 L KIPSTA](http://www.decathlon.pl/torba-regular-85-l-id_8339469.html) 89.99->79.99 (11%)  
 [Pas na amunicję kal. 12 maskujący SOLOGNAC](http://www.decathlon.pl/pas-na-amunicj-kal-12-kamo-id_8339576.html) 44.99->39.99 (11%)  
 [Zestaw Rakiet Do Badmintona Set Dis Dla Dorosłych Artengo](http://www.decathlon.pl/set-dis-ro-zielony-id_8379365.html) 44.99->39.99 (11%)  
-[Plecak myśliwski maskujący 45 -90 l Big game SOLOGNAC](http://www.decathlon.pl/plecak-big-game-45-90-l-id_8282736.html) 559.99->499.99 (10%)  
-[Polo żeglarskie 100 męskie TRIBORD](http://www.decathlon.pl/polo-eglarskie-100-id_8382912.html) 99.99->89.99 (10%)  
-[Żel do rąk hydroalkoholowy 75 ml APTONIA](http://www.decathlon.pl/el-do-rk-hydroalkohol-75-ml-id_8233813.html) 9.99->8.99 (10%)  
-
-Więcej informacji: https://github.com/thof/decapromolist#decapromolist  
-PayPal: _decapromolist@gmail.com_ (w razie gdyby ktoś chciał wspomóc projekt)  
