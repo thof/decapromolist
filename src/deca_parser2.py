@@ -73,6 +73,7 @@ class DecaParser2:
     def parse(self, subId, url):
         productCnt = 0
         content = urllib2.urlopen(url).read()
+        content = content.rstrip()
         if not content:
             raise IndexError
         response = html.fromstring(content)

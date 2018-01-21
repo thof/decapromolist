@@ -31,7 +31,7 @@ class PrepareResults:
     dateFormatted = datetime.datetime.now().strftime("%d.%m.%Y")
     datePrevProcFormatted = datetime.date.fromordinal(datetime.date.today().toordinal() - 1).strftime("%d.%m.%Y")
     dateTime = datetime.datetime.now().strftime("%Y-%m-%d 00:00:01")
-    #dateTime = "2016-01-02 00:00:01"
+    #dateTime = "2017-08-06 00:00:01"
     SPACES = "  "
 
     def __init__(self):
@@ -136,7 +136,7 @@ class PrepareResults:
                             name = name.encode('utf-8')
                         print(name+" "+url.encode('utf-8'))
                     except IndexError:
-                        print("\Invalid product: "+row)
+                        print("\Invalid product: {}".format(row['url']))
                         continue
 
                     # when a product is out of stock then skip to the next one
@@ -175,11 +175,11 @@ class PrepareResults:
                         sex = "U"
                     # get list of available sizes
                     sizeList = ''
-                    #product['sz'] = []
+                    # product['sz'] = []
                     for size in response.xpath('//li[@class=" available"]'):
                         sizeStr = size.xpath('a')[0].text
                         sizeList = sizeList + sizeStr.strip() + ', '
-                        #product['sz'].append(sizeStr)
+                        # product['sz'].append(sizeStr)
                     sizeListLower = sizeList.lower()
                     if any(substring in sizeListLower for substring in juniorYear):
                         sex = "J"
@@ -188,10 +188,10 @@ class PrepareResults:
                     product['sz'] = " "+sizeList[:-2]
                     product['sx'] = sex
                     product['nm'] = "<a href=\""+url.encode('utf-8')+"\">"+name+"</a>"
-                    #product['rl'] = url
+                    # product['rl'] = url
                     product['sc'] = cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
-                    #product['sc'] = row['category']
-                    #product['im'] = img
+                    # product['sc'] = row['category']
+                    # product['im'] = img
                     if row['discount'] >= 60:
                         text += "**"
                     text = text + "{}->{} ({}%) [{}]".format(row['old_price'], row['price'], row['discount'],
@@ -283,7 +283,7 @@ class PrepareResults:
                         name = name.encode('utf-8')
                     print(name + " " + url.encode('utf-8'))
                 except IndexError:
-                    print("\Invalid product: " + row)
+                    print("\Invalid product: {}".format(prod['url']))
                     continue
 
                 text = "[{}](http://www.decathlon.pl{}) {}->{} ({}%)".format(name, prod['url'], prod['prev_price'],
