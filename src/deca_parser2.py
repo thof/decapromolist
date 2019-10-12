@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import json
+import time
 import urllib2
 import re
 
@@ -34,82 +35,108 @@ class DecaParser2:
             jsonData = json.load(json_file)
         self.getProductsByCat(jsonData)
         self.items = sorted(self.items, key=lambda k: (k['id']))
-        Utils.saveJsonFile(Utils.getConfig()['subcatFile'], jsonData)
+        # Utils.saveJsonFile(Utils.getConfig()['subcatFile'], jsonData)
         Utils.deleteDuplicates(self.items)
         Utils.saveJsonFile(Utils.getConfig()['productFile'], self.items)
 
     def getProductsByCat(self, subcat):
         for index, cat in enumerate(subcat):
-            #print cat['url']
+            print cat['url']
             self.counter = 0
-            page = 0
+            url = "https://www.decathlon.pl/pl/getAjaxListProductNextPage?uriPage=/C-{}/I-Page1_3600".format(cat['subId'])
+            print(url)
             while True:
-                page += 1
-                if page == 1:
-                    url = "http://www.decathlon.pl/C-{}".format(cat['subId'])
-                else:
-                    url = "http://www.decathlon.pl/pl/getAjaxListProductNextPage?uriPage=/C-{}/I-Page{}_40".format(cat['subId'], page)
-                #print url
                 try:
                     self.parse(cat['subId'], url)
-                except urllib2.HTTPError as httpError:
-                    print httpError
-                    print url
-                    if str(httpError.code)[0] == '5':
-                        self.parse(cat['subId'], url)
-                    else:
-                        break
-                except IndexError:
-                    if page == 1:
-                        urlCat = "{}/pl/getSubNavigationMenu?primaryCategoryId={}".format(
-                            Utils.getConfig()['siteURL'], cat['subId'])
-                        print "*** Let's try to seek deeper {}".format(url)
-                        dataCat = GetSubcategories.getThirdLevelCat([urlCat])
-                        subcat[index+1:index+1] = dataCat
-                        self.getProductsByCat(dataCat)
                     break
+                except EmptyPayload:
+                    print('Empty payload!')
+                    time.sleep(3)
+                    continue
+            # page = 0
+            # while True:
+            #     page += 1
+            #     if page == 1:
+            #         url = "http://www.decathlon.pl/C-{}".format(cat['subId'])
+            #     else:
+            #         url = "http://www.decathlon.pl/pl/getAjaxListProductNextPage?uriPage=/C-{}/I-Page{}_40".format(cat['subId'], page)
+            #     # print url
+            #     try:
+            #         self.parse(cat['subId'], url)
+            #     except urllib2.HTTPError as httpError:
+            #         print httpError
+            #         print url
+            #         if str(httpError.code)[0] == '5':
+            #             self.parse(cat['subId'], url)
+            #         else:
+            #             break
+            #     except IndexError:
+            #         if page == 1:
+            #             print 'Primary category: '+url
+            #         #     urlCat = "{}/pl/getSubNavigationMenu?primaryCategoryId={}".format(
+            #         #         Utils.getConfig()['siteURL'], cat['subId'])
+            #         #     print "*** Let's try to seek deeper {}".format(url)
+            #         #     dataCat = GetSubcategories.getThirdLevelCat([urlCat])
+            #         #     subcat[index+1:index+1] = dataCat
+            #         #     self.getProductsByCat(dataCat)
+            #         break
             print "{} {}".format(cat['url'].encode('utf-8'), self.counter)
 
     def parse(self, subId, url):
         productCnt = 0
-        content = urllib2.urlopen(url).read()
+        # content = urllib2.urlopen(url).read()
+        content = Utils.safe_call(url)
         content = content.rstrip()
         if not content:
-            raise IndexError
+            raise EmptyPayload
         response = html.fromstring(content)
-        response.xpath('//li[@class="new-product-thumbnail desktop"]')[0]
-        for sel in response.xpath('//li[contains(@class, "new-product-thumbnail desktop")]'):
-            try:
-                item = {}
-                item['id'] = int(sel.xpath('@data-product-id')[0])
-            except IndexError or ValueError:
-                print "Skipped wrong category"
+
+        for sel in response.xpath('//div[@data-product-id]'):
+            if not sel.attrib['data-product-id']:
                 continue
+            if 'data-product-availability' not in sel.attrib or sel.attrib['data-product-availability'] == 0:
+                print('Not available https://decathlon.pl/{}'.format(sel.attrib['data-product-href']))
+                continue
+            item = {'id': int(sel.attrib['data-product-id']), 'price': float(sel.attrib['data-product-price']),
+                    'cat': subId, 'url': sel.attrib['data-product-href'], 'img': sel.attrib['data-product-picture-url']}
             try:
-                item['price'] = float(sel.xpath('@data-product-price')[0])
-                item['url'] = sel.xpath('a[@class="thumbnail-link"]/@href')[0]
-                #item['avail'] = sel.xpath('div//p[@class="product_info_dispo"]/a/@class')[0],
-                item['cat'] = subId
-                # item['name'] = sel.xpath('@data-product-name')[0]
-                # item['descr'] = sel.xpath('div//img/@alt').extract()[0]
-                try:
-                    item['oldPr'] = sel.xpath('.//span[@class="old-price crossed"]/text()')[0].strip()
-                    if not item['oldPr']:
-                        item.pop('oldPr', None)
-                        raise IndexError
-                    item['oldPr'] = re.match('([0-9,]+)', item['oldPr'].encode('ascii', 'ignore')).group(1)
-                    item['oldPr'] = float(''.join(item['oldPr'].split()).replace(",", "."))
-                    item['disc'] = int(re.findall(r'\d+', sel.xpath('.//span[@class="old-price-percentage"]/text()')[0])[0])
-                except IndexError:
-                    # print "Item without discount: "+item['id']+" "+item['name']
-                    pass
-                self.items.append(item)
-                productCnt += 1
-                self.counter += 1
+                old_price = sel.attrib['data-product-crossed-price']
+                item['oldPr'] = float(''.join(filter(lambda x: x.isdigit() or x=='.', old_price)))
+                item['disc'] = int(filter(str.isdigit, sel.attrib['data-product-price-percent']))
+            except KeyError:
+                # print "Item without discount: "+item['id']+" "+item['name']
+                pass
+            #print(item)
+            self.items.append(item)
+            productCnt += 1
+            self.counter += 1
+
+        for sel in response.xpath('//li[@data-product-id]'):
+            if not sel.attrib['data-product-id']:
+                continue
+            if 'data-product-availability' not in sel.attrib or sel.attrib['data-product-availability'] == 0:
+                print('Not available http://decathlon.pl/{}'.format(sel.attrib['data-product-href']))
+                continue
+            item = {'id': int(sel.attrib['data-product-id']), 'price': float(sel.attrib['data-product-price']),
+                    'cat': subId, 'url': str(sel.xpath('a[contains(@class, "thumbnail-link")]/@href')[0]), 'img': sel.attrib['data-product-imgurl']}
+            try:
+                old_price = sel.xpath('.//span[contains(@class, "old-price crossed")]/text()')[0].strip()
+                if not old_price:
+                    raise IndexError
+                item['oldPr'] = float(''.join(filter(lambda x: x.isdigit() or x == '.', old_price)))
+                discount = sel.xpath('.//span[@class="old-price-percentage"]/text()')[0].strip()
+                item['disc'] = int(filter(str.isdigit, discount))
             except IndexError:
-                print "Skipped item: " + item['id']
-                continue
-        #print "Product read: {}".format(productCnt)
+                # print "Item without discount: "+item['id']+" "+item['name']
+                pass
+            self.items.append(item)
+            productCnt += 1
+            self.counter += 1
+
+
+class EmptyPayload(Exception):
+    pass
+
 
 if __name__ == "__main__":
     proc = DecaParser2()

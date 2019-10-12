@@ -18,7 +18,11 @@
 import os
 import json
 import datetime
+import time
+import urllib2
+import socket, httplib
 from bisect import bisect_left
+import ssl
 
 
 class Utils:
@@ -75,3 +79,42 @@ class Utils:
                 items.pop(i)
                 i -= 1
             i += 1
+
+    @staticmethod
+    def safe_call(url):
+        done = False
+        while not done:
+            try:
+                response = urllib2.urlopen(url, timeout=20)
+                resp_code = int(str(response.getcode())[0])
+                if resp_code != 2:
+                    print('Error returned {} for URL: {}'.format(response.getcode(), url))
+                    time.sleep(2)
+                    continue
+                content = response.read()
+                return content
+            except urllib2.HTTPError:
+                print('Error returned for URL: {}'.format(url))
+                time.sleep(2)
+                continue
+            except urllib2.URLError:
+                print('Timeout')
+                time.sleep(2)
+                continue
+            except socket.timeout:
+                print('Timeout')
+                time.sleep(2)
+                continue
+            except socket.error:
+                print('Socket error')
+                time.sleep(2)
+                continue
+            except ssl.SSLError:
+                print('Timeout')
+                time.sleep(2)
+                continue
+            except httplib.IncompleteRead:
+                print('IncompleteRead')
+                time.sleep(2)
+                continue
+            done = True

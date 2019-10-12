@@ -56,6 +56,7 @@ class ProcessData:
                 product['category'] = item['cat']
                 # product['name'] = data['name'].encode('utf-8')
                 product['url'] = item['url'].encode('utf-8')
+                product['img'] = item['img'].encode('utf-8')
                 # in case of regular product add it to separate table
                 if item.get('oldPr', None) is None:
                     product['date'] = self.dateTime[:10]
@@ -63,8 +64,6 @@ class ProcessData:
                 else:
                     product['old_price'] = item['oldPr']
                     product['discount'] = item['disc']
-                    # product['description'] = data['descr'].encode('utf-8')
-                    product['url'] = item['url'].encode('utf-8')
                     productsPromo.append(product)
             except:
                 pass
@@ -100,9 +99,9 @@ class ProcessData:
                 index = Utils.binarySearch(idArray, product['id'])
                 # insert a new product record if it hasn't occurred before or the price has changed 
                 if index == -1 or productRegularDB[index]['price'] != product['price']:
-                    cur.execute("INSERT INTO product_price (id, date, price, category, url) \
-                    VALUES ({}, \"{}\", {}, {}, \"{}\")".format(product['id'], product['date'], product['price'],
-                                                                product['category'], product['url']))
+                    cur.execute("INSERT INTO product_price (id, date, price, category, url, img) \
+                    VALUES ({}, \"{}\", {}, {}, \"{}\", \"{}\")".format(product['id'], product['date'], product['price'],
+                                                                product['category'], product['url'], product['img']))
         except mdb.Error, e:
             print "Error %d: %s" % (e.args[0], e.args[1])
             sys.exit(1)
@@ -128,14 +127,14 @@ class ProcessData:
                 if index == -1:
                     # insert a new record
                     cur.execute("INSERT INTO product_promo (id, category, price, old_price, discount, first_date, \
-                        last_date, operation, prev_price, url) \
-                        VALUES ({},{},{},{},{},\"{}\",\"{}\",{},{},\"{}\")".format(product['id'],
+                        last_date, operation, prev_price, url, img) \
+                        VALUES ({},{},{},{},{},\"{}\",\"{}\",{},{},\"{}\",\"{}\")".format(product['id'],
                                                                                    product['category'],
                                                                                    product['price'],
                                                                                    product['old_price'],
                                                                                    product['discount'],
                                                                                    self.dateTime, self.dateTime,
-                                                                                   self.PROD_NEW, 0.0, product['url']))
+                                                                                   self.PROD_NEW, 0.0, product['url'], product['img']))
                 else:
                     # update existing record
                     prodBool[index] = True
@@ -155,11 +154,11 @@ class ProcessData:
                     product['operation'] = product.get('operation', None)
                     if product['operation'] is not None:
                         cur.execute("UPDATE product_promo SET category={}, price={}, old_price={}, \
-                            discount={}, last_date=\"{}\", operation={}, prev_price={}, url=\"{}\" WHERE id={}".format(
+                            discount={}, last_date=\"{}\", operation={}, prev_price={}, url=\"{}\", img=\"{}\" WHERE id={}".format(
                                 product['category'],
                                 product['price'], product['old_price'], product['discount'], self.dateTime,
                                 product['operation'],
-                                productPromoDB[index]['price'], product['url'], product['id']))
+                                productPromoDB[index]['price'], product['url'], product['img'], product['id']))
 
             for index, boolVal in enumerate(prodBool):
                 # additionally record with discontinued promo should be marked

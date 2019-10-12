@@ -30,8 +30,7 @@ class Run:
 
     print "Getting subcategories..."
     subcat = GetSubcategories()
-    catUrl = subcat.getCategories()
-    dataCat = subcat.getSubcategories(catUrl)
+    dataCat = subcat.getCategories2()
     subcat.saveSubcategories(dataCat)
     print "Done"
 

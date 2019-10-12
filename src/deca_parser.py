@@ -46,7 +46,7 @@ class DecaParser:
             while True:
                 page += 1
                 url = cat['url'].encode('utf-8') + "/I-Page{}_40".format(page)
-                #print url
+                print url
                 try:
                     self.parse(cat['subId'], url)
                 except urllib2.HTTPError as httpError:

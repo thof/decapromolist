@@ -22,6 +22,23 @@ from utils import Utils
 
 
 class GetSubcategories:
+    def getCategories2(self):
+        dataCat = []
+        headers = {'User-agent': 'Mozilla/5.0'}
+        req = urllib2.Request('https://www.decathlon.pl/pl/menu-load-sub-categories?categoryId=394904', None, headers)
+        req = urllib2.urlopen(req)
+        content = req.read().decode('UTF-8')
+        response = html.fromstring(content)
+        for cat in response.xpath('//a'):
+            url = cat.attrib['href']
+            start = url.find('-')+1
+            subId = url[start:url.find('-', start)]
+            # subId = cat.attrib['data-secondary-category-id']
+            subName = cat.text
+            data = {'subId': int(subId), 'url': Utils.getConfig()['siteURL'] + url, 'subName': subName}
+            dataCat.append(data)
+        return dataCat
+
     def getCategories(self):
         categories = []
         catUrl = []
@@ -71,7 +88,8 @@ class GetSubcategories:
 
 if __name__ == "__main__":
     proc = GetSubcategories()
-    catUrl = proc.getCategories()
-    dataCat = proc.getSubcategories(catUrl)
+    # catUrl = proc.getCategories()
+    # dataCat = proc.getSubcategories(catUrl)
+    dataCat = proc.getCategories2()
     proc.saveSubcategories(dataCat)
     print "Done"

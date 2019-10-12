@@ -51,6 +51,7 @@ class PrepareResults:
             4: "Powrót",
             5: "Powrót z wyższą ceną z " + prevPrice,
             6: "Powrót z niższą ceną z " + prevPrice,
+            7: "Obniżka"
         }
         return switcher.get(argument, "Error")
 
@@ -72,11 +73,6 @@ class PrepareResults:
                 con.close()
 
     def preparePromoList(self):
-        male = ["męsk", "mesk"]
-        female = ["damsk", "kobie"]
-        junior = ["junior", "dziec"]
-        juniorYear = ["lat", "ans"]
-
         try:
             con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
                               Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
@@ -104,126 +100,29 @@ class PrepareResults:
                 if rowCat is None:
                     continue
                 else:
-                    catStr = "\nKategoria: " + cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
+                    catStr = "\nKategoria: " + cat['subName'].encode('utf-8')
+                    # catStr = "\nKategoria: " + cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
                 # process promoted items
                 for row in productPromoDB:
-                    product = {}
                     # when a product doesn't belong to considered subcategory skip to the next one
                     if row['category'] != cat['subId']:
                         continue
-                    # if row['name'] == row['name'].upper():
-                    #     name = str(unicode(row['name'], 'utf-8', 'ignore').title().encode('utf-8'))
-                    # else:
-                    #     name = row['name']
-                    url = Utils.getConfig()['siteURL'] + row['url']
-                    content = urllib2.urlopen(url).read()
-                    response = html.fromstring(content)
 
-                    # get product information
-                    nameCheck = ''
-                    namePosStart = content.find('tc_vars')
-                    if namePosStart != -1:
-                        namePosEnd = content.find('/*', namePosStart)
-                        nameCheck = content[namePosStart:namePosEnd]
-                        nameCheck = nameCheck.lower()
-
-                    # get the product name
-                    try:
-                        name = response.xpath('//span[@id="productName"]')[0].text
-                        if name == name.upper():
-                            name = name.title().encode('utf-8')
-                        else:
-                            name = name.encode('utf-8')
-                        print(name+" "+url.encode('utf-8'))
-                    except IndexError:
-                        print("\Invalid product: {}".format(row['url']))
+                    product = self.process_item(row, cat)
+                    if not product:
                         continue
 
-                    # when a product is out of stock then skip to the next one
-                    outOfStock = response.xpath('//link[@href="http://schema.org/OutOfStock"]')
-                    if outOfStock:
-                        print("Out of stock")
-                        continue
-
-                    # get an image
-                    imgPosStart = content.find('tc_vars["product_url_picture"]')
-                    imgPosEnd = content.find('";', imgPosStart)
-                    img = content[imgPosStart + 34:imgPosEnd]
-
-                    # quite vague method to determine the sex
-                    # (in most cases it works just fine, i.e. when the description is correct)
-                    label = ''
-                    labelPosStart = content.find('tc_vars["product_breadcrumb_label"]')
-                    if labelPosStart != -1:
-                        labelPosEnd = content.find('");', labelPosStart)
-                        label = content[labelPosStart + 49:labelPosEnd]
-                        label = label.lower()
-                    nameLower = name.lower()
-                    if any(substring in label for substring in male) == True or \
-                                    any(substring in nameLower for substring in male) == True or \
-                                    any(substring in nameCheck for substring in male) == True:
-                        sex = "M"
-                    elif any(substring in label for substring in female) == True or \
-                                    any(substring in nameLower for substring in female) == True or \
-                                    any(substring in nameCheck for substring in female) == True:
-                        sex = "F"
-                    elif any(substring in label for substring in junior) == True or \
-                                    any(substring in nameLower for substring in junior) == True or \
-                                    any(substring in nameCheck for substring in junior) == True:
-                        sex = "J"
-                    else:
-                        sex = "U"
-                    # get list of available sizes
-                    sizeList = ''
-                    # product['sz'] = []
-                    for size in response.xpath('//li[@class=" available"]'):
-                        sizeStr = size.xpath('a')[0].text
-                        sizeList = sizeList + sizeStr.strip() + ', '
-                        # product['sz'].append(sizeStr)
-                    sizeListLower = sizeList.lower()
-                    if any(substring in sizeListLower for substring in juniorYear):
-                        sex = "J"
-
-                    text = "{} [{}]({}) ".format(sex, name, url)
-                    product['sz'] = " "+sizeList[:-2]
-                    product['sx'] = sex
-                    product['nm'] = "<a href=\""+url.encode('utf-8')+"\">"+name+"</a>"
-                    # product['rl'] = url
-                    product['sc'] = cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
-                    # product['sc'] = row['category']
-                    # product['im'] = img
-                    if row['discount'] >= 60:
-                        text += "**"
-                    text = text + "{}->{} ({}%) [{}]".format(row['old_price'], row['price'], row['discount'],
-                                                             self.operationToDescr(row['operation'],
-                                                                                   str(row['prev_price'])))
-                    product['pr'] = row['price']
-                    product['op'] = row['old_price']
-                    product['dc'] = row['discount']
-                    product['pp'] = row['prev_price']
-                    product['or'] = self.operationToDescr(row['operation'], str(row['prev_price']))
-                    if row['discount'] >= 60:
-                        text += "**"
-                    if sizeList != '':
-                        try:
-                            text = text + " [Rozmiary: {}]".format(sizeList[:-2])
-                        except UnicodeEncodeError:
-                            pass
                     # additional check to be sure that the current price is the lowest to this day
                     # (checking "price history")
                     prodLowestPrice = next((prodLowestPrice for prodLowestPrice in productPriceDB if
                                             prodLowestPrice['id'] == row['id'] and prodLowestPrice['price'] < row[
                                                 'price']), None)
                     if prodLowestPrice is not None:
-                        text = text + " [Regularna cena była niższa {} w dn. {}]".format(prodLowestPrice['price'],
-                                                                                         prodLowestPrice['date'])
+                        # text = text + " [Regularna cena była niższa {} w dn. {}]".format(prodLowestPrice['price'],
+                        #                                                                  prodLowestPrice['date'])
                         product['rp'] = prodLowestPrice['price']
                         product['rd'] = prodLowestPrice['date'].strftime("%d.%m.%Y")
 
-                    if catStr != '':
-                        print(catStr+self.SPACES, file=self.mdFile)
-                        catStr = ''
-                    print(text+self.SPACES, file=self.mdFile)
                     self.products.append(product)
         except mdb.Error, e:
             print("Error %d: %s" % (e.args[0], e.args[1]))
@@ -237,9 +136,6 @@ class PrepareResults:
             con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
                               Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
             cur = con.cursor(mdb.cursors.DictCursor)
-            #             cur.execute('SELECT p1.* FROM product_price p1 LEFT JOIN product_price p2 \
-            #                         ON (p1.id = p2.id AND p1.price > p2.price) WHERE p2.price IS NULL')
-            #             productPriceLowest = cur.fetchall()
             # get all products from DB collected today
             cur.execute("SELECT * FROM product_price WHERE date = \"{}\"".format(self.dateTime[:10]))
             productCurrentPrice = cur.fetchall()
@@ -262,63 +158,124 @@ class PrepareResults:
                 if prodLast is not None and prod['price'] < prodLast['price']:
                     prod['discount'] = int((1 - prod['price'] / prodLast['price']) * 100)
                     # don't take into account when the discount is 10% or less
-                    if prod['discount'] < 10:
+                    if not(prod['discount'] >= 10 or prodLast['price'] >=999):
                         continue
                     prod['prev_price'] = prodLast['price']
+                    prod['old_price'] = prodLast['price']
+                    prod['operation'] = 7
                     productFinal.append(prod)
             productFinal = sorted(productFinal, key=lambda k: (k['discount'], k['price']), reverse=True)
 
             # prepare information to be printed in a readable form
             for prod in productFinal:
-                product = {}
-                url = 'http://www.decathlon.pl' + prod['url']
-                content = urllib2.urlopen(url).read()
-                response = html.fromstring(content)
-
-                try:
-                    name = response.xpath('//span[@id="productName"]')[0].text
-                    if name == name.upper():
-                        name = name.title().encode('utf-8')
-                    else:
-                        name = name.encode('utf-8')
-                    print(name + " " + url.encode('utf-8'))
-                except IndexError:
-                    print("\Invalid product: {}".format(prod['url']))
+                cat = next((row for row in self.subcatData if row['subId'] == prod['category']), None)
+                product = self.process_item(prod, cat)
+                if not product:
                     continue
 
-                text = "[{}](http://www.decathlon.pl{}) {}->{} ({}%)".format(name, prod['url'], prod['prev_price'],
-                                                                             prod['price'], prod['discount'])
-
-                product['nm'] = "<a href=\"http://www.decathlon.pl"+prod['url']+"\">"+name+"</a>"
-                product['rl'] = prod['url']
-                product['pr'] = prod['price']
-                product['pp'] = prod['prev_price']
-                product['op'] = prod['prev_price']
-                product['dc'] = int(100-prod['price']*100/prod['prev_price'])
-                product['sx'] = "U"
-                product['or'] = "Obniżka"
-                cat = next((row for row in self.subcatData if row['subId'] == prod['category']), None)
-                if cat is not None:
-                    product['sc'] = cat['name'].encode('utf-8') + "->" + cat['subName'].encode('utf-8')
                 # additional check to be sure that the current price is the lowest to this day
                 # (checking "price history")
                 prodLowestPrice = next(
                         (row for row in productPrevPrice if row['id'] == prod['id'] and row['price'] < prod['price']),
                         None)
                 if prodLowestPrice is not None:
-                    text = text + " [Regularna cena była niższa {} w dn. {}]".format(prodLowestPrice['price'],
-                                                                                     prodLowestPrice['date'])
+                    # text = text + " [Regularna cena była niższa {} w dn. {}]".format(prodLowestPrice['price'],
+                    #                                                                  prodLowestPrice['date'])
                     product['rp'] = prodLowestPrice['price']
                     product['rd'] = prodLowestPrice['date'].strftime("%d.%m.%Y")
-                print(text+self.SPACES, file=self.mdFile)
                 self.products.append(product)
-            print("", file=self.mdFile)
         except mdb.Error, e:
             print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
             if con:
                 con.close()
+
+    def process_item(self, row, cat):
+        product = {}
+        male = ["męsk", "mesk"]
+        female = ["damsk", "kobie"]
+        junior = ["junior", "dziec"]
+        juniorYear = ["lat", "ans", "maluszk"]
+
+        url = Utils.getConfig()['siteURL'] + row['url']
+        img = Utils.getConfig()['siteURL'] + row['img']
+        content = Utils.safe_call(url)
+        response = html.fromstring(content)
+
+        # get product information
+        nameCheck = ''
+        namePosStart = content.find('tc_vars')
+        if namePosStart != -1:
+            namePosEnd = content.find('/*', namePosStart)
+            nameCheck = content[namePosStart:namePosEnd]
+            nameCheck = nameCheck.lower()
+
+        # get the product name
+        try:
+            name = response.xpath('//span[@id="productName"]')[0].text
+            if name == name.upper():
+                name = name.title().encode('utf-8')
+            else:
+                name = name.encode('utf-8')
+            print(name + " " + url.encode('utf-8'))
+        except IndexError:
+            print("\Invalid product: {}".format(url))
+            return None
+
+        # when a product is out of stock then skip to the next one
+        outOfStock = response.xpath('//link[@href="http://schema.org/OutOfStock"]')
+        if outOfStock:
+            print("Out of stock")
+            return None
+
+        # quite vague method to determine the sex
+        # (in most cases it works just fine, i.e. when the description is correct)
+        label = ''
+        labelPosStart = content.find('tc_vars["product_breadcrumb_label"]')
+        if labelPosStart != -1:
+            labelPosEnd = content.find('");', labelPosStart)
+            label = content[labelPosStart + 49:labelPosEnd]
+            label = label.lower()
+        nameLower = name.lower()
+        if any(substring in label for substring in male) == True or \
+                any(substring in nameLower for substring in male) == True or \
+                any(substring in nameCheck for substring in male) == True:
+            sex = "M"
+        elif any(substring in label for substring in female) == True or \
+                any(substring in nameLower for substring in female) == True or \
+                any(substring in nameCheck for substring in female) == True:
+            sex = "F"
+        elif any(substring in label for substring in junior) == True or \
+                any(substring in nameLower for substring in junior) == True or \
+                any(substring in nameCheck for substring in junior) == True:
+            sex = "J"
+        else:
+            sex = "U"
+        # get list of available sizes
+        sizeList = ''
+        # product['sz'] = []
+        for size in response.xpath('//li[@class=" available"]'):
+            sizeStr = size.xpath('a')[0].text
+            sizeList = sizeList + sizeStr.strip() + ', '
+            # product['sz'].append(sizeStr)
+        sizeListLower = sizeList.lower()
+        if any(substring in sizeListLower for substring in juniorYear):
+            sex = "J"
+
+        if cat['subName'] == cat['subName'].upper():
+            cat['subName'] = cat['subName'].title()
+
+        product['sz'] = " " + sizeList[:-2]
+        product['sx'] = sex
+        product['nm'] = "{}<br><a href=\"{}\"><img src=\"{}\"></a>".format(name, url, img)
+        product['sc'] = cat['subName'].encode('utf-8')
+        product['pr'] = row['price']
+        product['op'] = row['old_price']
+        product['dc'] = row['discount']
+        product['pp'] = row['prev_price']
+        product['or'] = self.operationToDescr(row['operation'], str(row['prev_price']))
+        return product
 
     def finish(self):
         print("Więcej informacji: https://github.com/thof/decapromolist#decapromolist"+self.SPACES, file=self.mdFile)
