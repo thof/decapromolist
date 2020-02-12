@@ -45,6 +45,7 @@ class Run:
     print "Done"
 
     print "Preparing results list..."
+
     res = PrepareResults()
     res.getPrevProcDate()
     res.preparePromoList()

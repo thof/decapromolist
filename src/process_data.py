@@ -16,7 +16,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import json
-import MySQLdb as mdb
+# import MySQLdb as mdb
+import mysql.connector
 import sys
 import datetime
 import time
@@ -74,9 +75,12 @@ class ProcessData:
     def updateRegularProducts(self, productRegular):
         print 'Updating prices for regular products...'
         try:
-            con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
-                              Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
-            cur = con.cursor(mdb.cursors.DictCursor)
+            # con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
+            #                   Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
+            # cur = con.cursor(mdb.cursors.DictCursor)
+            con = mysql.connector.connect(host=Utils.getConfig()['host'], user=Utils.getConfig()['user'],
+                                          passwd=Utils.getConfig()['passwd'], database=Utils.getConfig()['dbname'])
+            cur = con.cursor(dictionary=True)
             # select the most recent records for each product
             start = time.time()
             # ids = ''
@@ -102,7 +106,7 @@ class ProcessData:
                     cur.execute("INSERT INTO product_price (id, date, price, category, url, img) \
                     VALUES ({}, \"{}\", {}, {}, \"{}\", \"{}\")".format(product['id'], product['date'], product['price'],
                                                                 product['category'], product['url'], product['img']))
-        except mdb.Error, e:
+        except mysql.connector.Error, e:
             print "Error %d: %s" % (e.args[0], e.args[1])
             sys.exit(1)
         finally:
@@ -112,9 +116,12 @@ class ProcessData:
     def updatePromoProducts(self, productsPromo):
         print 'Updating prices for promoted products...'
         try:
-            con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
-                              Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
-            cur = con.cursor(mdb.cursors.DictCursor)
+            # con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
+            #                   Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
+            # cur = con.cursor(mdb.cursors.DictCursor)
+            con = mysql.connector.connect(host=Utils.getConfig()['host'], user=Utils.getConfig()['user'],
+                                          passwd=Utils.getConfig()['passwd'], database=Utils.getConfig()['dbname'])
+            cur = con.cursor(dictionary=True)
             # get records for promoted products
             cur.execute('SELECT * FROM product_promo')
             productPromoDB = cur.fetchall()
@@ -167,7 +174,7 @@ class ProcessData:
                             "UPDATE product_promo SET category={}, last_date=\"{}\", operation={} WHERE id={}".format(
                                     productPromoDB[index]['category'], self.dateTime,
                                     self.PROD_WITHDRAW, productPromoDB[index]['id']))
-        except mdb.Error, e:
+        except mysql.connector.Error, e:
             print "Error %d: %s" % (e.args[0], e.args[1])
             sys.exit(1)
         finally:

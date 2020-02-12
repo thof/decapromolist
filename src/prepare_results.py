@@ -18,23 +18,26 @@
 
 from __future__ import print_function
 import json
-import MySQLdb as mdb
+# import MySQLdb as mdb
+import mysql.connector
 import sys
 import datetime
 import urllib2
 from lxml import html
 from utils import Utils
 from process_data import ProcessData
+import faulthandler
 
 
 class PrepareResults:
     dateFormatted = datetime.datetime.now().strftime("%d.%m.%Y")
     datePrevProcFormatted = datetime.date.fromordinal(datetime.date.today().toordinal() - 1).strftime("%d.%m.%Y")
     dateTime = datetime.datetime.now().strftime("%Y-%m-%d 00:00:01")
-    #dateTime = "2017-08-06 00:00:01"
+    # dateTime = "2019-11-18 00:00:01"
     SPACES = "  "
 
     def __init__(self):
+        faulthandler.enable()
         self.products = []
         Utils.renameFile(Utils.getConfig()['decapromolistMDFile'])
         self.mdFile = open(Utils.getConfig()['decapromolistMDFile'],'w')
@@ -58,14 +61,17 @@ class PrepareResults:
     def getPrevProcDate(self):
         # get date of the previous processing
         try:
-            con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
-                              Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
-            cur = con.cursor(mdb.cursors.DictCursor)
+            # con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
+            #                   Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
+            # cur = con.cursor(mdb.cursors.DictCursor)
+            con = mysql.connector.connect(host=Utils.getConfig()['host'], user=Utils.getConfig()['user'],
+                                          passwd=Utils.getConfig()['passwd'], database=Utils.getConfig()['dbname'])
+            cur = con.cursor(dictionary=True)
             cur.execute("SELECT last_date FROM product_promo WHERE last_date < \"{}\" ORDER BY last_date DESC LIMIT 1"
                         .format(self.dateTime))
             row = cur.fetchone()
             self.datePrevProcFormatted = row['last_date'].strftime('%d.%m.%Y')
-        except mdb.Error, e:
+        except mysql.connector.Error, e:
             print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
@@ -74,9 +80,12 @@ class PrepareResults:
 
     def preparePromoList(self):
         try:
-            con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
-                              Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
-            cur = con.cursor(mdb.cursors.DictCursor)
+            # con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
+            #                   Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
+            # cur = con.cursor(mdb.cursors.DictCursor)
+            con = mysql.connector.connect(host=Utils.getConfig()['host'], user=Utils.getConfig()['user'],
+                                          passwd=Utils.getConfig()['passwd'], database=Utils.getConfig()['dbname'])
+            cur = con.cursor(dictionary=True)
             #             cur.execute('SELECT p1.* FROM product_price p1 LEFT JOIN product_price p2 \
             #                         ON (p1.id = p2.id AND p1.price > p2.price) WHERE p2.price IS NULL')
             # get all products from DB
@@ -94,6 +103,7 @@ class PrepareResults:
             print("#decapromolist lista promowanych produktów (delta {}-{}):".format(self.datePrevProcFormatted,
                                                                              self.dateFormatted), file=self.mdFile)
 
+            index_tmp=0
             for cat in self.subcatData:
                 # checked whether the list contains at least one product belonging to processed subcategory
                 rowCat = next((row for row in productPromoDB if row['category'] == cat['subId']), None)
@@ -108,6 +118,10 @@ class PrepareResults:
                     if row['category'] != cat['subId']:
                         continue
 
+                    index_tmp=index_tmp+1
+                    if index_tmp == 308:
+                        print('break')
+                    print(index_tmp)
                     product = self.process_item(row, cat)
                     if not product:
                         continue
@@ -124,7 +138,7 @@ class PrepareResults:
                         product['rd'] = prodLowestPrice['date'].strftime("%d.%m.%Y")
 
                     self.products.append(product)
-        except mdb.Error, e:
+        except mysql.connector.Error, e:
             print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
@@ -133,9 +147,12 @@ class PrepareResults:
 
     def prepareRegularList(self):
         try:
-            con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
-                              Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
-            cur = con.cursor(mdb.cursors.DictCursor)
+            # con = mdb.connect(Utils.getConfig()['host'], Utils.getConfig()['user'],
+            #                   Utils.getConfig()['passwd'], Utils.getConfig()['dbname'])
+            # cur = con.cursor(mdb.cursors.DictCursor)
+            con = mysql.connector.connect(host=Utils.getConfig()['host'], user=Utils.getConfig()['user'],
+                                          passwd=Utils.getConfig()['passwd'], database=Utils.getConfig()['dbname'])
+            cur = con.cursor(dictionary=True)
             # get all products from DB collected today
             cur.execute("SELECT * FROM product_price WHERE date = \"{}\"".format(self.dateTime[:10]))
             productCurrentPrice = cur.fetchall()
@@ -184,7 +201,7 @@ class PrepareResults:
                     product['rp'] = prodLowestPrice['price']
                     product['rd'] = prodLowestPrice['date'].strftime("%d.%m.%Y")
                 self.products.append(product)
-        except mdb.Error, e:
+        except mysql.connector.Error, e:
             print("Error %d: %s" % (e.args[0], e.args[1]))
             sys.exit(1)
         finally:
