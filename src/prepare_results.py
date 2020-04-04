@@ -26,7 +26,6 @@ import urllib2
 from lxml import html
 from utils import Utils
 from process_data import ProcessData
-import faulthandler
 
 
 class PrepareResults:
@@ -37,7 +36,6 @@ class PrepareResults:
     SPACES = "  "
 
     def __init__(self):
-        faulthandler.enable()
         self.products = []
         Utils.renameFile(Utils.getConfig()['decapromolistMDFile'])
         self.mdFile = open(Utils.getConfig()['decapromolistMDFile'],'w')
