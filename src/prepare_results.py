@@ -214,7 +214,7 @@ class PrepareResults:
         juniorYear = ["lat", "ans", "maluszk"]
 
         url = Utils.getConfig()['siteURL'] + row['url']
-        img = Utils.getConfig()['siteURL'] + row['img']
+        img = row['img']
         content = Utils.safe_call(url)
         response = html.fromstring(content)
 
